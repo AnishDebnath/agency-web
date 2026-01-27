@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CTA: React.FC = () => {
     return (
-        <section className="py-24 px-4 bg-white dark:bg-background-dark">
+        <section className="py-24 px-4 bg-transparent">
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}

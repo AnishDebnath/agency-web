@@ -5,7 +5,7 @@ import { scrollTestimonials } from './data';
 
 const Testimonials: React.FC = () => {
     return (
-        <section className="py-24 bg-[#FAFAFA] dark:bg-background-dark relative">
+        <section className="py-24 bg-transparent relative">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <motion.div

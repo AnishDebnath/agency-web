@@ -4,7 +4,7 @@ import { services } from './data';
 
 const Services: React.FC = () => {
     return (
-        <section className="py-32 bg-white dark:bg-background-dark relative overflow-hidden" id="services">
+        <section className="py-32 bg-transparent relative overflow-hidden" id="services">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <motion.div

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Process: React.FC = () => {
     return (
-        <section className="py-24 bg-[#FAFAFA] dark:bg-slate-950/50" id="process">
+        <section className="py-24 bg-transparent" id="process">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <motion.div
