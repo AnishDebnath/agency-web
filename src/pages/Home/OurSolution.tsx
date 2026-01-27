@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const OurSolution: React.FC = () => {
+    const [highlightSolution, setHighlightSolution] = React.useState(true);
+
     const problems = [
         "Editing takes me forever.",
         "I miss uploads trying to finish videos.",
@@ -38,15 +40,33 @@ const OurSolution: React.FC = () => {
                     >
                         Why Most Creators Burn Out
                     </motion.h2>
-                    <motion.p
+                    <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
+                        className="flex flex-col items-center gap-6"
                     >
-                        A quick side-by-side of the struggles you shouldn’t have to deal with and how we make sure you don’t.
-                    </motion.p>
+                        <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                            A quick side-by-side of the struggles you shouldn’t have to deal with and how we make sure you don’t.
+                        </p>
+
+                        {/* Comparison Toggle */}
+                        <div className="flex items-center gap-3 bg-white dark:bg-slate-900/50 px-4 py-2 rounded-full border border-slate-200 dark:border-slate-800 shadow mt-2">
+                            <span className={`text-xs font-bold uppercase tracking-wider transition-colors ${!highlightSolution ? 'text-slate-900 dark:text-white' : 'text-slate-400'}`}>Problem</span>
+                            <button
+                                onClick={() => setHighlightSolution(!highlightSolution)}
+                                className={`w-12 h-6 rounded-full flex items-center transition-colors duration-300 px-1 ${highlightSolution ? 'bg-primary' : 'bg-slate-300 dark:bg-slate-700'}`}
+                            >
+                                <motion.div
+                                    className="w-4 h-4 bg-white rounded-full shadow-sm"
+                                    animate={{ x: highlightSolution ? 24 : 0 }}
+                                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                                />
+                            </button>
+                            <span className={`text-xs font-bold uppercase tracking-wider transition-colors ${highlightSolution ? 'text-primary' : 'text-slate-400'}`}>Solution</span>
+                        </div>
+                    </motion.div>
                 </div>
 
                 <div className="max-w-5xl mx-auto">
@@ -58,7 +78,7 @@ const OurSolution: React.FC = () => {
                     >
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
                             {/* Problems Column */}
-                            <div className="flex flex-col p-8 md:p-12">
+                            <div className={`flex flex-col p-8 md:p-12 transition-all duration-500 ${highlightSolution ? 'opacity-50 blur-[1px] grayscale' : 'opacity-100'}`}>
                                 <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 mb-12 text-center">Creators Problem</h3>
                                 <ul className="space-y-8">
                                     {problems.map((problem, idx) => (
@@ -80,7 +100,14 @@ const OurSolution: React.FC = () => {
                             </div>
 
                             {/* Solutions Column */}
-                            <div className="flex flex-col bg-[#121212] rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                            <motion.div
+                                className="flex flex-col bg-[#121212] rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden transition-all duration-500"
+                                animate={{
+                                    opacity: highlightSolution ? 1 : 0.3,
+                                    scale: highlightSolution ? 1 : 0.98,
+                                    filter: highlightSolution ? 'grayscale(0%)' : 'grayscale(100%)'
+                                }}
+                            >
                                 <h3 className="text-xl md:text-2xl font-bold text-primary mb-12 text-center relative z-10">Our Solution</h3>
                                 <ul className="space-y-8 relative z-10">
                                     {solutions.map((solution, idx) => (
@@ -101,7 +128,7 @@ const OurSolution: React.FC = () => {
                                 </ul>
                                 {/* Subtle decorative glow */}
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[80px] rounded-full pointer-events-none" />
-                            </div>
+                            </motion.div>
                         </div>
                     </motion.div>
                 </div>
