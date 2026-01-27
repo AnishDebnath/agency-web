@@ -24,13 +24,14 @@ const ScrollToTop = () => {
 };
 
 const App: React.FC = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    const isDark = localStorage.getItem('theme') === 'dark' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    setDarkMode(isDark);
-  }, []);
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
+    // Check localStorage, and default to true (dark) if nothing is found
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme === 'dark';
+    }
+    return true;
+  });
 
   useEffect(() => {
     if (darkMode) {
@@ -42,7 +43,7 @@ const App: React.FC = () => {
     }
   }, [darkMode]);
 
-  const toggleTheme = () => setDarkMode(!darkMode);
+  const toggleTheme = () => setDarkMode(prev => !prev);
 
   return (
     <HashRouter>
