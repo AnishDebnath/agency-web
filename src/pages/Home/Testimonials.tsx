@@ -12,9 +12,9 @@ const Testimonials: React.FC = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="mb-4"
+                        className="inline-block mb-6 px-4 py-1.5 rounded-full border border-dashed border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm"
                     >
-                        <span className="text-[#FF5C00] font-bold tracking-[0.2em] uppercase text-sm">TESTIMONIALS</span>
+                        <span className="text-primary font-bold tracking-widest uppercase text-xs">✦ Testimonials</span>
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ const Testimonials: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="sticky top-28 sm:top-32 bg-white dark:bg-slate-900 p-2 rounded-[2.5rem] border border-dashed border-slate-200 dark:border-slate-800"
+                                className="sticky top-28 sm:top-32 bg-white dark:bg-slate-900 p-2 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-xl"
                             >
                                 <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 md:p-10 shadow-sm relative overflow-hidden">
                                     <div className="flex items-start gap-4">

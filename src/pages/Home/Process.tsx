@@ -10,10 +10,9 @@ const Process: React.FC = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-white/10 border border-slate-200 dark:border-white/10 text-primary text-xs font-bold uppercase tracking-widest mb-6 shadow-sm"
+                        className="inline-block mb-6 px-4 py-1.5 rounded-full border border-dashed border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm"
                     >
-                        <span className="material-symbols-rounded text-sm">settings</span>
-                        Process
+                        <span className="text-primary font-bold tracking-widest uppercase text-xs">✦ Process</span>
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -41,7 +40,7 @@ const Process: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 border border-slate-200 border-dashed dark:border-slate-800 hover:shadow-xl transition-shadow duration-300"
+                        className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 border border-slate-200 dark:border-slate-800 shadow-xl hover:shadow-2xl transition-all duration-300"
                     >
                         <div className="flex justify-between items-start mb-10">
                             <span className="text-sm font-bold text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">01</span>
@@ -72,7 +71,7 @@ const Process: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 border border-slate-200 border-dashed dark:border-slate-800 hover:shadow-xl transition-shadow duration-300"
+                        className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 border border-slate-100 dark:border-slate-800 shadow-xl hover:shadow-2xl transition-all duration-300"
                     >
                         <div className="flex justify-between items-start mb-10">
                             <span className="text-sm font-bold text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">02</span>
@@ -98,7 +97,7 @@ const Process: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
-                        className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 border border-slate-200 border-dashed dark:border-slate-800 hover:shadow-xl transition-shadow duration-300"
+                        className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 border border-slate-100 dark:border-slate-800 shadow-xl hover:shadow-2xl transition-all duration-300"
                     >
                         <div className="flex justify-between items-start mb-10">
                             <span className="text-sm font-bold text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">03</span>
@@ -134,7 +133,7 @@ const Process: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.4 }}
-                        className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 border border-slate-200 border-dashed dark:border-slate-800 hover:shadow-xl transition-shadow duration-300"
+                        className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 border border-slate-100 dark:border-slate-800 shadow-xl hover:shadow-2xl transition-all duration-300"
                     >
                         <div className="flex justify-between items-start mb-10">
                             <span className="text-sm font-bold text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">04</span>

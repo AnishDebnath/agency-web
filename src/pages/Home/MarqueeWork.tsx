@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const MarqueeWork: React.FC = () => {
     return (
-        <section className="py-24 bg-transparent border-y border-slate-200 dark:border-white/5 overflow-hidden">
+        <section className="py-24 bg-transparent overflow-hidden">
             <div className="flex flex-col gap-8">
                 {/* Row 1 - Left */}
                 <div className="flex">

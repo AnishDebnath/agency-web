@@ -64,8 +64,8 @@ const Footer: React.FC = () => {
 
                 {/* Bottom */}
                 <div className="relative mt-auto pt-24 pb-8">
-                    <div className="absolute bottom-0 left-0 right-0 w-full flex justify-center items-end pointer-events-none select-none">
-                        <h1 className="text-[18vw] font-black text-center text-white/[0.04] leading-[0.75] tracking-tighter whitespace-nowrap font-display translate-y-[15%]">CREATORFLOW</h1>
+                    <div className="absolute bottom-0 left-0 right-0 flex justify-center items-end pointer-events-none select-none">
+                        <h1 className="text-[20vw] font-black text-center text-white/[0.04] leading-[0.75] tracking-tighter whitespace-nowrap font-display translate-y-[15%]">Agency</h1>
                     </div>
                     <div className="relative z-10 text-center">
                         <p className="text-slate-500 text-sm font-medium">© All Right Reserved by CreatorFlow - 2025</p>

@@ -12,14 +12,12 @@ const FAQ: React.FC = () => {
                     {/* Left Column - Text */}
                     <div className="lg:col-span-5">
                         <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-dashed border-slate-300 dark:border-slate-700 mb-8"
+                            className="inline-block mb-6 px-4 py-1.5 rounded-full border border-dashed border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm"
                         >
-                            <span className="text-primary font-bold text-xs uppercase flex items-center gap-1">
-                                <span className="text-[#FF5C00] text-sm">✦</span> FAQ
-                            </span>
+                            <span className="text-primary font-bold tracking-widest uppercase text-xs">✦ FAQ</span>
                         </motion.div>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
@@ -53,7 +51,7 @@ const FAQ: React.FC = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1 }}
-                                    className={`rounded-[2rem] transition-all duration-300 ${isOpen ? 'bg-[#FAFAFA] dark:bg-slate-900 p-8' : 'bg-transparent px-8 py-5 hover:bg-slate-50 dark:hover:bg-slate-900/50'}`}
+                                    className={`rounded-[2rem] transition-all duration-300 border border-slate-100 dark:border-slate-800 shadow-lg hover:shadow-xl ${isOpen ? 'bg-white dark:bg-slate-900 p-8' : 'bg-white/80 dark:bg-slate-900/50 px-8 py-5 hover:bg-white dark:hover:bg-slate-900'}`}
                                 >
                                     <button
                                         onClick={() => setOpenFAQ(isOpen ? null : index)}
