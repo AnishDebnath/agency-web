@@ -129,7 +129,7 @@ const WhyChooseUs: React.FC = () => {
                         transition={{ delay: 0.5 }}
                         className="flex flex-col group bg-white dark:bg-slate-900 rounded-[2.5rem] p-4 shadow-xl border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-300"
                     >
-                        <div className="bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] h-[320px] mb-8 relative overflow-hidden flex items-center justify-center gap-4 border border-slate-100 dark:border-slate-800">
+                        <div className="bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] h-[320px] mb-8 relative overflow-hidden flex items-center justify-center gap-3 md:gap-4 px-4 md:px-8 border border-slate-100 dark:border-slate-800">
                             {[
                                 { d: '02', l: 'Raw Footage' },
                                 { d: '06', l: 'Assembly' },
@@ -138,7 +138,7 @@ const WhyChooseUs: React.FC = () => {
                                 <motion.div
                                     key={i}
                                     whileHover={{ y: -5 }}
-                                    className="bg-white dark:bg-slate-800 p-2.5 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 w-28 aspect-[3/4] flex flex-col"
+                                    className="bg-white dark:bg-slate-900 p-2 md:p-2.5 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 w-[28%] min-w-[90px] md:w-28 aspect-[3/4] flex flex-col"
                                 >
                                     <div className={`
                                 flex-1 flex items-center justify-center rounded-xl mb-1

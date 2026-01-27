@@ -47,18 +47,18 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <div className="hidden md:flex items-center bg-slate-100/50 dark:bg-white/5 rounded-full p-1 border border-black/5 dark:border-white/5">
+                    <div className="hidden md:flex items-center bg-slate-100/80 dark:bg-white/5 rounded-full p-1 border border-slate-200 dark:border-white/5">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${isActive(link.path) ? 'text-slate-900 dark:text-white' : 'text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary'}`}
+                                className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${isActive(link.path) ? 'text-primary dark:text-white' : 'text-slate-500 dark:text-slate-400 hover:text-primary'}`}
                             >
                                 {link.name}
                                 {isActive(link.path) && (
                                     <motion.div
                                         layoutId="nav-pill"
-                                        className="absolute inset-0 bg-white dark:bg-white/10 rounded-full shadow-sm -z-10 border border-black/5 dark:border-white/5"
+                                        className="absolute inset-0 bg-white dark:bg-white/10 rounded-full shadow-md -z-10 border border-slate-200 dark:border-white/5"
                                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                     />
                                 )}
