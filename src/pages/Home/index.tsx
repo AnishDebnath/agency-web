@@ -6,6 +6,7 @@ import About from './About';
 import WhyChooseUs from './WhyChooseUs';
 import Services from './Services';
 import Process from './Process';
+import FeaturedWork from './FeaturedWork';
 import Testimonials from './Testimonials';
 import FAQ from './FAQ';
 import Blog from './Blog';
@@ -49,6 +50,7 @@ const Home: React.FC = () => {
                 <WhyChooseUs />
                 <Services />
                 <Process />
+                <FeaturedWork />
                 <Testimonials />
                 <FAQ />
                 <Blog />
