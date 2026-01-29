@@ -9,6 +9,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
+import ProjectDetail from './pages/Work/ProjectDetail';
 
 // Components
 import Navbar from './components/Navbar/Navbar';
@@ -58,6 +59,7 @@ const App: React.FC = () => {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/work" element={<Work />} />
+              <Route path="/work/:id" element={<ProjectDetail />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </AnimatePresence>
