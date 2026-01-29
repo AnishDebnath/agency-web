@@ -48,29 +48,55 @@ export const homeArticles = [
     }
 ];
 
+export const imageTestimonials = [
+    {
+        name: "Ethan Moore",
+        title: "Co-founder, NovaTech",
+        text: "Franklin turned our ideas into a sharp, clean brand. Fast, easy, and right on point.",
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop"
+    },
+    {
+        name: "Ansh",
+        title: "Co-founder, NovaTech",
+        text: "Franklin turned our ideas into a sharp, clean brand. Fast, easy, and right on point.",
+        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop"
+    },
+    {
+        name: "Narendra Modi",
+        title: "Prime Minister of India",
+        text: "Franklin turned our ideas into a sharp, clean brand. Fast, easy, and right on point.",
+        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop"
+    }
+];
+
 export const scrollTestimonials = [
     {
         handle: "@mark_locus",
+        name: "Mark Locus",
         text: "Bro who edits your videos? The pacing and cuts are SO clean.",
         avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=100&q=80"
     },
     {
         handle: "@tonysa",
+        name: "Tony Sa",
         text: "Whoever’s editing your videos now... they deserve a raise this was smooth af",
         avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80"
     },
     {
         handle: "@johnbai",
+        name: "John Bai",
         text: "Editing leveled up big time. Timing, cuts, music — everything’s just right",
         avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80"
     },
     {
         handle: "@chrismaw",
+        name: "Chris Maw",
         text: "Noticed the pacing and flow are so much better lately. You working with someone new?",
         avatar: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=100&q=80"
     },
     {
         handle: "@jemmy",
+        name: "Jemmy",
         text: "This feels super polished now. Loving the new vibe — your editor is killing it",
         avatar: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=100&q=80"
     }
