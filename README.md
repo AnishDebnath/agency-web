@@ -1,4 +1,4 @@
-# CreatorFlow | Premier Video Editing Agency
+# CreatorFlow | Website building SaaS Agency
 
 CreatorFlow is a high-end, modern web application for a professional video editing agency based in London, UK. Designed with a focus on "Visual Excellence" and "Premium Aesthetics," the platform showcases the agency's portfolio, services, and growth-focused editing philosophy.
 
