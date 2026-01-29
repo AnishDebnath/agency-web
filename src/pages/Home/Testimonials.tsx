@@ -216,7 +216,7 @@ const Testimonials: React.FC = () => {
                                     </a>
                                 </div>
 
-                                <div className="flex flex-wrap justify-center gap-2 relative z-10">
+                                <div className="flex flex-wrap justify-center gap-x-2 gap-y-3 relative z-10">
                                     {['Collaboration', 'Business Inquiry', 'Want My Videos Edited', 'Send Me Samples'].map((tag, i) => (
                                         <span
                                             key={i}
