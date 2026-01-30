@@ -5,7 +5,7 @@ import { footerLinks, footerSocials } from './data';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-[#FAFAFA] dark:bg-background-dark px-4 pb-6 pt-0 transition-colors duration-500">
+        <footer className="bg-transparent px-4 pb-6 pt-0 transition-colors duration-500 relative z-10">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

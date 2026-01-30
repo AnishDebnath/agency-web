@@ -13,7 +13,7 @@ import ProjectDetail from './pages/Work/ProjectDetail';
 
 // Components
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import Layout from './components/Layout';
 
 // Scroll to top component
 const ScrollToTop = () => {
@@ -22,6 +22,29 @@ const ScrollToTop = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;
+};
+
+const AppContent: React.FC<{ darkMode: boolean; toggleTheme: () => void }> = ({ darkMode, toggleTheme }) => {
+  const location = useLocation();
+
+  return (
+    <div className="min-h-screen flex flex-col font-sans">
+      <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
+      <Layout>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/work/:id" element={<ProjectDetail />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </AnimatePresence>
+      </Layout>
+    </div>
+  );
 };
 
 const App: React.FC = () => {
@@ -49,23 +72,7 @@ const App: React.FC = () => {
   return (
     <HashRouter>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col font-sans">
-        <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
-        <main className="flex-grow">
-          <AnimatePresence mode="wait">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/work" element={<Work />} />
-              <Route path="/work/:id" element={<ProjectDetail />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </AnimatePresence>
-        </main>
-        <Footer />
-      </div>
+      <AppContent darkMode={darkMode} toggleTheme={toggleTheme} />
     </HashRouter>
   );
 };
