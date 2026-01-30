@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Pages
 import Home from './pages/Home';
@@ -28,19 +28,28 @@ const AppContent: React.FC<{ darkMode: boolean; toggleTheme: () => void }> = ({ 
   const location = useLocation();
 
   return (
-    <div className="min-h-screen flex flex-col font-sans">
+    <div className="font-sans">
       <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
       <Layout>
         <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/work/:id" element={<ProjectDetail />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <motion.div
+            key={location.pathname}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="flex flex-col flex-grow"
+          >
+            <Routes location={location}>
+              <Route path="/" element={<Home />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/work" element={<Work />} />
+              <Route path="/work/:id" element={<ProjectDetail />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </motion.div>
         </AnimatePresence>
       </Layout>
     </div>
