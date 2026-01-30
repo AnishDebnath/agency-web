@@ -8,7 +8,10 @@ export interface Project {
     description: string;
     services: string[];
     date: string;
-    website: string;
+    liveLink: string;
+    liveLabel?: string;
+    buyLink?: string;
+    customiseLink?: string;
     content: (
         | { type: 'image'; src: string; alt: string; className?: string }
         | { type: 'text'; title: string; body: string }
@@ -27,7 +30,10 @@ export const projects: Project[] = [
         description: "We transformed a standard tech review into a cinematic experience, using dynamic b-roll and sound design to keep retention high throughout the 15-minute runtime.",
         services: ["Video Editing", "Sound Design", "Motion Graphics"],
         date: "Oct 2023",
-        website: "https://youtube.com",
+        liveLink: "https://youtube.com",
+        liveLabel: "View Demo",
+        buyLink: "/contact?project=iphone15",
+        customiseLink: "/contact?service=editing",
         content: [
             { type: 'image', src: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80", alt: "Main Hero" },
             { type: 'text', title: "The Challenge", body: "Tech reviews often suffer from 'talking head' syndrome. The goal was to visualize every spec and feature mentioned without losing the creator's personal touch." },
@@ -46,7 +52,10 @@ export const projects: Project[] = [
         description: "Capturing the chaos and control of a CEO's daily routine. We focused on pacing and music to reflect the energy of the day.",
         services: ["Vlog Editing", "Color Grading"],
         date: "Nov 2023",
-        website: "https://instagram.com",
+        liveLink: "https://instagram.com",
+        liveLabel: "View Live",
+        buyLink: "/contact?project=ceo-vlog",
+        customiseLink: "/contact?service=vlog",
         content: [
             { type: 'image', src: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1600&q=80", alt: "Hero" },
             { type: 'text', title: "Narrative Flow", body: "Vlogs can easily feel disjointed. We created a clear three-act structure: The Morning Routine, The Grind, and The Wind Down." },
@@ -63,7 +72,10 @@ export const projects: Project[] = [
         description: "A snappy, beat-synced edit designed to loop perfectly and catch eyes on the For You Page.",
         services: ["Social Cuts", "Effects"],
         date: "Dec 2023",
-        website: "https://tiktok.com",
+        liveLink: "https://tiktok.com",
+        liveLabel: "View Demo",
+        buyLink: "/contact?project=tiktok-dance",
+        customiseLink: "/contact?service=shorts",
         content: [
             { type: 'image', src: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=1600&q=80", alt: "Dance Hero" },
             { type: 'text', title: "Retention Hacks", body: "We used subtle zoom-ins on every beat drop and added dynamic object tracking to keep the focus strictly on the movement." }
@@ -79,7 +91,10 @@ export const projects: Project[] = [
         description: "Breaking down complex market trends into easy-to-digest visual segments using heavy motion graphics.",
         services: ["Motion Design", "Editing"],
         date: "Jan 2024",
-        website: "https://twitter.com",
+        liveLink: "https://twitter.com",
+        liveLabel: "View Live",
+        buyLink: "/contact?project=crypto",
+        customiseLink: "/contact?service=educational",
         content: [
             { type: 'image', src: "https://images.unsplash.com/photo-1621504450168-b8c437517b3d?auto=format&fit=crop&w=1600&q=80", alt: "Crypto Chart" }
         ]
@@ -94,7 +109,10 @@ export const projects: Project[] = [
         description: "Atmospheric sound design and color grading that transports the viewer straight to Japan.",
         services: ["Sound Design", "Color Grading", "Editing"],
         date: "Feb 2024",
-        website: "https://youtube.com",
+        liveLink: "https://youtube.com",
+        liveLabel: "View Demo",
+        buyLink: "/contact?project=japan-vlog",
+        customiseLink: "/contact?service=vlog",
         content: [
             { type: 'image', src: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1600&q=80", alt: "Tokyo Streets" }
         ]
@@ -109,7 +127,10 @@ export const projects: Project[] = [
         description: "A fast-paced transformation reveal designed to stop the scroll and drive coaching signups.",
         services: ["Vertical Editing", "Sound Design"],
         date: "Mar 2024",
-        website: "https://instagram.com",
+        liveLink: "https://instagram.com",
+        liveLabel: "View Demo",
+        buyLink: "/contact?project=fitness",
+        customiseLink: "/contact?service=shorts",
         content: [
             { type: 'image', src: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80", alt: "Gym" }
         ]
