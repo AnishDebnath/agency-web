@@ -24,7 +24,7 @@ const WorkPage: React.FC = () => {
 
                 <motion.div
                     layout
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1400px] mx-auto"
                 >
                     <AnimatePresence mode="popLayout">
                         {filteredProjects.map((project) => (
