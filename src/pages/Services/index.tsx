@@ -1,6 +1,6 @@
 import React from 'react';
 import { servicesList } from './data';
-import ServiceCard from './ServiceCard';
+import ServiceItem from './ServiceItem';
 import ServicesHeader from './ServicesHeader';
 import ServicesCTA from './ServicesCTA';
 
@@ -9,11 +9,13 @@ const ServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto pt-32 pb-24 px-4 sm:px-6 lg:px-8">
             <ServicesHeader />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+            <div className="flex flex-col mb-24">
                 {servicesList.map((service, i) => (
-                    <ServiceCard key={i} service={service} delay={i * 0.1} />
+                    <ServiceItem key={i} service={service} index={i} />
                 ))}
             </div>
+
+            <ServicesCTA />
         </div>
     );
 };

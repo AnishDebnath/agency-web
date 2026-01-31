@@ -7,6 +7,7 @@ const navLinks = [
     { name: 'Services', path: '/services' },
     { name: 'About us', path: '/about' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Contact us', path: '/contact' },
 ];
 
 interface NavbarProps {
@@ -84,10 +85,13 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                         </button>
 
                         <Link
-                            to="/contact"
-                            className="hidden sm:flex bg-[#111] dark:bg-white text-white dark:text-[#111] px-6 py-2.5 rounded-full font-bold text-sm items-center gap-2 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-black/5"
+                            to="/free-prototype"
+                            className="hidden sm:flex bg-[#111] dark:bg-white text-white dark:text-[#111] pl-6 pr-2 py-2 rounded-full font-bold text-sm items-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-black/5 group"
                         >
-                            Let's Talk
+                            Free Prototype
+                            <div className="w-8 h-8 bg-white dark:bg-[#111] rounded-full flex items-center justify-center text-[#111] dark:text-white group-hover:rotate-45 transition-transform duration-300">
+                                <span className="material-symbols-rounded text-xl">arrow_outward</span>
+                            </div>
                         </Link>
 
                         <button
@@ -131,10 +135,13 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                                 ))}
                                 <hr className="border-slate-100 dark:border-slate-800 my-2" />
                                 <Link
-                                    to="/contact"
-                                    className="w-full bg-[#111] dark:bg-white text-white dark:text-[#111] p-4 rounded-2xl font-bold text-center text-lg flex items-center justify-center gap-2"
+                                    to="/free-prototype"
+                                    className="w-full bg-[#111] dark:bg-white text-white dark:text-[#111] p-2 pl-6 rounded-2xl font-bold text-lg flex items-center justify-between group"
                                 >
-                                    Book a Call <span className="material-symbols-rounded">arrow_forward</span>
+                                    Free Prototype
+                                    <div className="w-12 h-12 bg-white dark:bg-[#111] rounded-xl flex items-center justify-center text-[#111] dark:text-white group-hover:rotate-45 transition-transform duration-300">
+                                        <span className="material-symbols-rounded text-2xl">arrow_outward</span>
+                                    </div>
                                 </Link>
                             </nav>
                         </motion.div>

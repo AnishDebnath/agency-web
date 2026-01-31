@@ -9,6 +9,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
+import FreePrototypePage from './pages/FreePrototype';
 import ProjectDetail from './pages/Work/ProjectDetail';
 
 // Components
@@ -48,6 +49,7 @@ const AppContent: React.FC<{ darkMode: boolean; toggleTheme: () => void }> = ({ 
               <Route path="/work" element={<Work />} />
               <Route path="/work/:id" element={<ProjectDetail />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/free-prototype" element={<FreePrototypePage />} />
             </Routes>
           </motion.div>
         </AnimatePresence>

@@ -58,7 +58,7 @@ const FreePrototype: React.FC = () => {
                                 transition={{ delay: 0.3 }}
                                 className="flex flex-wrap gap-4"
                             >
-                                <Link to="/contact" className="px-8 py-4 rounded-full bg-primary text-white font-bold text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
+                                <Link to="/free-prototype" className="px-8 py-4 rounded-full bg-primary text-white font-bold text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
                                     Get Your Free Prototype
                                 </Link>
                                 <Link to="/process" className="px-8 py-4 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">

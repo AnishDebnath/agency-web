@@ -7,6 +7,7 @@ import WorkHeader from './WorkHeader';
 import WorkFilter from './WorkFilter';
 import FreePrototype from '../../components/FreePrototype';
 import OurSolution from '../Home/OurSolution';
+import Process from '../Home/Process';
 
 const WorkPage: React.FC = () => {
     const [activeCategory, setActiveCategory] = useState("All");
@@ -37,7 +38,7 @@ const WorkPage: React.FC = () => {
             </div>
 
             <FreePrototype />
-            <OurSolution />
+            <Process />
         </div>
     );
 };
