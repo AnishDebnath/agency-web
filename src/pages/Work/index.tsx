@@ -5,6 +5,8 @@ import { projects } from './data';
 import ProjectCard from './ProjectCard';
 import WorkHeader from './WorkHeader';
 import WorkFilter from './WorkFilter';
+import FreePrototype from './FreePrototype';
+import OurSolution from '../Home/OurSolution';
 
 const WorkPage: React.FC = () => {
     const [activeCategory, setActiveCategory] = useState("All");
@@ -15,7 +17,7 @@ const WorkPage: React.FC = () => {
 
     return (
         <div className="pt-32 pb-24 relative">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-24">
                 <WorkHeader />
                 <WorkFilter
                     activeCategory={activeCategory}
@@ -33,6 +35,9 @@ const WorkPage: React.FC = () => {
                     </AnimatePresence>
                 </motion.div>
             </div>
+
+            <FreePrototype />
+            <OurSolution />
         </div>
     );
 };
