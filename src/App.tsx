@@ -12,7 +12,7 @@ import Contact from './pages/Contact';
 import ProjectDetail from './pages/Work/ProjectDetail';
 
 // Components
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar';
 import Layout from './components/Layout';
 
 // Scroll to top component

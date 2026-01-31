@@ -3,6 +3,7 @@ import Hero from './Hero';
 import Carousel from './Carousel';
 import Marquee from './Marquee';
 import About from './About';
+import FreePrototype from '../../components/FreePrototype';
 import WhyChooseUs from './WhyChooseUs';
 import Services from './Services';
 import Process from './Process';
@@ -28,6 +29,7 @@ const Home: React.FC = () => {
             <Carousel windowWidth={windowWidth} />
             <Marquee />
             <About />
+            <FreePrototype />
             <WhyChooseUs />
             <Services />
             <Process />

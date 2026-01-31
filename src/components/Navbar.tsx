@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { navLinks } from './data';
+const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Work', path: '/work' },
+    { name: 'Services', path: '/services' },
+    { name: 'About us', path: '/about' },
+    { name: 'Blog', path: '/blog' },
+];
 
 interface NavbarProps {
     darkMode: boolean;

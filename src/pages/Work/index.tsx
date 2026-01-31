@@ -5,7 +5,7 @@ import { projects } from './data';
 import ProjectCard from './ProjectCard';
 import WorkHeader from './WorkHeader';
 import WorkFilter from './WorkFilter';
-import FreePrototype from './FreePrototype';
+import FreePrototype from '../../components/FreePrototype';
 import OurSolution from '../Home/OurSolution';
 
 const WorkPage: React.FC = () => {
