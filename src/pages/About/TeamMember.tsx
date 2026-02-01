@@ -19,7 +19,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ member, delay }) => {
             transition={{ delay, duration: 0.5 }}
             className="group"
         >
-            <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-6 relative shadow-lg bg-slate-100 dark:bg-slate-800">
+            <div className="aspect-[4/5] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden mb-4 relative shadow-md bg-slate-100 dark:bg-slate-800">
                 <img
                     src={member.image}
                     alt={member.name}
@@ -27,10 +27,10 @@ const TeamMember: React.FC<TeamMemberProps> = ({ member, delay }) => {
                 />
 
                 {/* Overlay Details */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8 px-4 text-center">
-                    <div className="flex gap-3">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6 px-4 text-center">
+                    <div className="flex gap-2">
                         {['X', 'IN'].map((social) => (
-                            <button key={social} className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white hover:bg-white/40 hover:scale-110 transition-all font-bold text-[10px]">
+                            <button key={social} className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white hover:bg-white/40 hover:scale-110 transition-all font-bold text-[9px]">
                                 {social}
                             </button>
                         ))}
@@ -38,12 +38,12 @@ const TeamMember: React.FC<TeamMemberProps> = ({ member, delay }) => {
                 </div>
             </div>
 
-            <div className="px-2 text-center md:text-left">
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1 tracking-tight group-hover:text-primary transition-colors">
+            <div className="px-1 text-center md:text-left">
+                <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white mb-0.5 tracking-tight group-hover:text-primary transition-colors">
                     {member.name}
                 </h3>
-                <p className="text-primary font-bold text-xs uppercase tracking-widest leading-none mb-1">{member.role}</p>
-                <div className="h-0.5 w-8 bg-primary/20 group-hover:w-full transition-all duration-500"></div>
+                <p className="text-primary font-bold text-[9px] md:text-[10px] uppercase tracking-widest leading-none mb-2">{member.role}</p>
+                <div className="h-0.5 w-6 bg-primary/20 group-hover:w-12 transition-all duration-500"></div>
             </div>
         </motion.div>
     );
