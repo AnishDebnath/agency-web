@@ -157,14 +157,24 @@ const Testimonials: React.FC = () => {
                                 className="flex gap-5 w-max"
                             >
                                 {[...marqueeTestimonials, ...marqueeTestimonials, ...marqueeTestimonials].map((item, i) => (
-                                    <div key={i} className="w-[400px] bg-white dark:bg-slate-900 p-5 rounded-[1.5rem] border border-slate-100 dark:border-slate-800 shadow-sm flex-shrink-0">
-                                        <div className="flex items-center gap-3 mb-3">
-                                            <img src={item.avatar} alt={item.handle} className="w-10 h-10 rounded-full object-cover" />
-                                            <div>
-                                                <p className="font-bold text-slate-900 dark:text-white text-sm">{item.name || item.handle}</p>
+                                    <div key={i} className="flex-shrink-0 w-[400px] h-full bg-white/50 dark:bg-slate-900/50 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-[1.5rem] p-6 mr-4 shadow-xl shadow-black/5">
+                                        <div className="flex flex-col gap-4">
+                                            <div className="flex items-center gap-3">
+                                                <div className="flex-shrink-0 relative">
+                                                    <img src={item.avatar} alt={item.handle} className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 object-cover border-2 border-primary/20" />
+                                                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-primary rounded-full flex items-center justify-center border-2 border-white dark:border-slate-900">
+                                                        <span className="material-symbols-rounded text-[8px] text-white">verified</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <p className="font-bold text-slate-900 dark:text-white text-sm leading-tight">{item.name || item.handle}</p>
+                                                    <p className="text-primary font-bold text-[10px] tracking-wider uppercase">{item.handle}</p>
+                                                </div>
                                             </div>
+                                            <p className="text-slate-600 dark:text-slate-300 text-xs leading-relaxed font-medium line-clamp-3">
+                                                "{item.text}"
+                                            </p>
                                         </div>
-                                        <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed line-clamp-3">"{item.text}"</p>
                                     </div>
                                 ))}
                             </motion.div>
