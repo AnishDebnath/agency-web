@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { projects } from './data';
 import ProjectCard from './ProjectCard';
 import WorkHeader from './WorkHeader';
 import WorkFilter from './WorkFilter';
 import FreePrototype from '../../components/FreePrototype';
-import OurSolution from '../Home/OurSolution';
 import Process from '../Home/Process';
+import WorkTestimonials from './WorkTestimonials';
 
 const WorkPage: React.FC = () => {
     const [activeCategory, setActiveCategory] = useState("All");
@@ -39,6 +38,7 @@ const WorkPage: React.FC = () => {
 
             <FreePrototype />
             <Process />
+            <WorkTestimonials />
         </div>
     );
 };

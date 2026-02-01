@@ -2,7 +2,7 @@ import React from 'react';
 import { servicesList } from './data';
 import ServiceItem from './ServiceItem';
 import ServicesHeader from './ServicesHeader';
-import ServicesCTA from './ServicesCTA';
+import FAQ from '../Home/FAQ';
 
 const ServicesPage: React.FC = () => {
     return (
@@ -14,8 +14,7 @@ const ServicesPage: React.FC = () => {
                     <ServiceItem key={i} service={service} index={i} />
                 ))}
             </div>
-
-            <ServicesCTA />
+            <FAQ />
         </div>
     );
 };
