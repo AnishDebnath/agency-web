@@ -22,8 +22,8 @@ export const teamMembers = [
 ];
 
 export const values = [
-    { title: "Speed", icon: "bolt", desc: "We know the algorithm waits for no one. We deliver fast without breaking a sweat." },
-    { title: "Quality", icon: "diamond", desc: "Pixel perfect cuts, seamless transitions, and sound design that hits different." },
-    { title: "Transparency", icon: "visibility", desc: "No hidden fees, no ghosting. Just clear communication and results." },
-    { title: "Growth", icon: "trending_up", desc: "We don't just edit videos; we edit for retention, engagement, and growth." }
+    { title: "Our Mission", icon: "rocket_launch", desc: "Empowering creators to scale their impact through high-retention, conversion-focused video editing that converts viewers into fans." },
+    { title: "Our Vision", icon: "visibility", desc: "Setting the global standard for creative post-production where every frame serves a purpose and every cut drives growth." },
+    { title: "Our Strategy", icon: "auto_awesome", desc: "Merging human creative intuition with hyper-efficient workflows to deliver viral-ready content without the traditional friction." },
+    { title: "Our Culture", icon: "favorite", desc: "A results-obsessed collective of artists and strategists dedicated to the long-term success and scaling of the creators we serve." }
 ];
