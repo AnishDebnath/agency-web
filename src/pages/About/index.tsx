@@ -4,6 +4,7 @@ import AboutHeroImage from './AboutHeroImage';
 import AboutStats from './AboutStats';
 import AboutValues from './AboutValues';
 import AboutTeam from './AboutTeam';
+import WhyChooseUs from '../Home/WhyChooseUs';
 
 const AboutPage: React.FC = () => {
     return (
@@ -20,6 +21,7 @@ const AboutPage: React.FC = () => {
                     <AboutStats />
                 </div>
                 <AboutValues />
+                <WhyChooseUs />
                 <AboutTeam />
             </div>
         </div>
