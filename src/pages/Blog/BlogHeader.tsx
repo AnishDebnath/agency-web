@@ -3,22 +3,35 @@ import { motion } from 'framer-motion';
 
 const BlogHeader: React.FC = () => {
     return (
-        <header className="text-center py-10">
-            <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="inline-block py-1 px-3 rounded-full bg-orange-100 dark:bg-orange-900/30 text-primary text-xs font-bold uppercase tracking-wider mb-4"
+        <div className="text-center mb-16 md:mb-20">
+            <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="inline-block mb-6 px-4 py-1.5 rounded-full border border-dashed border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm"
             >
-                Blog & Resources
-            </motion.span>
+                <span className="text-primary font-bold tracking-widest uppercase text-xs flex items-center gap-2">
+                    <span className="material-symbols-rounded text-sm">edit_note</span> Blog & Resources
+                </span>
+            </motion.div>
+
             <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight"
+                transition={{ duration: 0.6 }}
+                className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold mb-6 tracking-tight text-slate-900 dark:text-white"
             >
                 Creator Insights <span className="text-primary">& Tips</span>
             </motion.h1>
-        </header>
+
+            <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
+            >
+                Deep dives into video strategy, editing techniques, and content growth.
+            </motion.p>
+        </div>
     );
 };
 

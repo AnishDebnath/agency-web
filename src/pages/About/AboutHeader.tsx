@@ -28,7 +28,7 @@ const AboutHeader: React.FC = () => {
                     >
                         <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=300&q=80" className="w-full h-full object-cover opacity-90" alt="Magic" />
                     </motion.span>
-                    <span className="text-primary italic">Secret</span>
+                    <span className="text-primary">Secret</span>
                 </div>
                 <div>Weapon Behind Creators.</div>
             </motion.h1>

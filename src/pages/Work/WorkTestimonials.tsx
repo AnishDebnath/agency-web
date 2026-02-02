@@ -104,7 +104,7 @@ const WorkTestimonials: React.FC = () => {
                     viewport={{ once: true }}
                     className="text-4xl md:text-6xl font-display font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight"
                 >
-                    Trusted by builders <span className="text-primary italic">everywhere.</span>
+                    Trusted by builders <span className="text-primary">everywhere.</span>
                 </motion.h2>
 
                 <motion.p

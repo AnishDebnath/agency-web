@@ -23,7 +23,7 @@ const AboutTeam: React.FC = () => {
                     viewport={{ once: true }}
                     className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 dark:text-white tracking-tight mb-6"
                 >
-                    Meet the <span className="text-primary italic">creative</span> minds.
+                    Meet the <span className="text-primary">creative</span> minds.
                 </motion.h2>
                 <motion.p
                     initial={{ opacity: 0 }}

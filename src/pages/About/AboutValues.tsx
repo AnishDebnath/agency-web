@@ -21,7 +21,7 @@ const AboutValues: React.FC = () => {
                     viewport={{ once: true }}
                     className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 dark:text-white tracking-tight mb-6"
                 >
-                    Our <span className="text-primary italic">Mission</span> & <span className="text-primary italic">Vision.</span>
+                    Our <span className="text-primary">Mission</span> & <span className="text-primary">Vision.</span>
                 </motion.h2>
                 <motion.p
                     initial={{ opacity: 0 }}
