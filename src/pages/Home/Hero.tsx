@@ -1,6 +1,19 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, animate } from 'framer-motion';
 import { Link } from 'react-router-dom';
+
+const CountUp: React.FC<{ val: number }> = ({ val }) => {
+    const [count, setCount] = useState(0);
+    useEffect(() => {
+        const controls = animate(0, val, {
+            duration: 2,
+            ease: "easeOut",
+            onUpdate: (value) => setCount(Math.floor(value)),
+        });
+        return () => controls.stop();
+    }, [val]);
+    return <>{count.toLocaleString()}</>;
+};
 
 const Hero: React.FC = () => {
     const [isAvatarHovered, setIsAvatarHovered] = useState(false);
@@ -97,7 +110,9 @@ const Hero: React.FC = () => {
                                 </motion.span>
                             ))}
                         </div>
-                        <p className="text-sm font-bold text-slate-700 dark:text-slate-300">Trusted by 100+ clients</p>
+                        <p className="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center justify-center sm:justify-start gap-1">
+                            Trusted by <CountUp val={100} />+ clients
+                        </p>
                     </motion.div>
                 </motion.div>
 

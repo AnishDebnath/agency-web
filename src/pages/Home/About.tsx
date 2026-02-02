@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, useInView, animate } from 'framer-motion';
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -8,7 +8,52 @@ const fadeInUp = {
     transition: { duration: 0.5 }
 };
 
+interface Stat {
+    count: string;
+    label: string;
+}
+
+const StatItem: React.FC<{ stat: Stat; idx: number }> = ({ stat, idx }) => {
+    const [displayCount, setDisplayCount] = useState(0);
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+    useEffect(() => {
+        if (isInView) {
+            const numericValue = parseFloat(stat.count.replace(/,/g, '').replace(/[M+]/g, ''));
+            const controls = animate(0, numericValue, {
+                duration: 2,
+                ease: "easeOut",
+                onUpdate: (value) => setDisplayCount(Math.floor(value)),
+            });
+            return () => controls.stop();
+        }
+    }, [isInView, stat.count]);
+
+    const getFormattedCount = () => {
+        const formatted = displayCount.toLocaleString();
+        if (stat.count.includes('M')) return `${formatted}M+`;
+        if (stat.count.includes('+')) return `${formatted}+`;
+        return formatted;
+    };
+
+    return (
+        <div className="text-center min-w-[140px]" ref={ref}>
+            <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2 font-display">
+                {getFormattedCount()}
+            </div>
+            <div className="text-slate-900 dark:text-slate-100 font-bold text-sm tracking-tight">{stat.label}</div>
+        </div>
+    );
+};
+
 const About: React.FC = () => {
+    const stats: Stat[] = [
+        { count: '1,200+', label: 'Videos Delivered' },
+        { count: '300+', label: 'Creators Served' },
+        { count: '450M+', label: 'Total Views' },
+    ];
+
     return (
         <section className="py-24" id="about">
             <div className="max-w-5xl mx-auto px-4 text-center">
@@ -29,15 +74,8 @@ const About: React.FC = () => {
                     viewport={{ once: true }}
                     className="inline-flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 bg-white dark:bg-slate-900 rounded-[3rem] px-12 py-10 shadow-xl shadow-slate-200/50 dark:shadow-black/50 border-2 border-dashed border-slate-200 dark:border-slate-800"
                 >
-                    {[
-                        { count: '1,200+', label: 'Videos Delivered' },
-                        { count: '300+', label: 'Creators Served' },
-                        { count: '450M+', label: 'Total Views' },
-                    ].map((stat, idx) => (
-                        <div key={idx} className="text-center min-w-[140px]">
-                            <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2 font-display">{stat.count}</div>
-                            <div className="text-slate-900 dark:text-slate-100 font-bold text-sm tracking-tight">{stat.label}</div>
-                        </div>
+                    {stats.map((stat, idx) => (
+                        <StatItem key={idx} stat={stat} idx={idx} />
                     ))}
                 </motion.div>
             </div>

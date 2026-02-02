@@ -1,5 +1,25 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useInView, animate } from 'framer-motion';
+
+const CountUp: React.FC<{ val: number; delay?: number }> = ({ val, delay = 0 }) => {
+    const [count, setCount] = useState(0);
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    useEffect(() => {
+        if (isInView) {
+            const controls = animate(0, val, {
+                duration: 2,
+                delay: delay,
+                ease: "easeOut",
+                onUpdate: (value) => setCount(Math.floor(value)),
+            });
+            return () => controls.stop();
+        }
+    }, [isInView, val, delay]);
+
+    return <span ref={ref}>{count.toString().padStart(2, '0')}</span>;
+};
 
 const WhyChooseUs: React.FC = () => {
     return (
@@ -131,9 +151,9 @@ const WhyChooseUs: React.FC = () => {
                     >
                         <div className="bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] h-[320px] mb-8 relative overflow-hidden flex items-center justify-center gap-3 md:gap-4 px-4 md:px-8 border border-slate-100 dark:border-slate-800">
                             {[
-                                { d: '02', l: 'Raw Footage' },
-                                { d: '06', l: 'Assembly' },
-                                { d: '24', l: 'Final Cut', highlight: true }
+                                { d: 2, l: 'Raw Footage' },
+                                { d: 6, l: 'Assembly' },
+                                { d: 24, l: 'Final Cut', highlight: true }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
@@ -146,7 +166,9 @@ const WhyChooseUs: React.FC = () => {
                                             ? 'bg-gradient-to-br from-green-400 to-green-600 text-white shadow-inner'
                                             : 'bg-transparent text-slate-900 dark:text-white'}
                              `}>
-                                        <span className="text-4xl font-bold tracking-tight">{item.d}</span>
+                                        <span className="text-4xl font-bold tracking-tight">
+                                            <CountUp val={item.d} delay={0.6 + (i * 0.1)} />
+                                        </span>
                                     </div>
                                     <div className="text-center py-2">
                                         <div className={`text-xs font-medium ${item.highlight ? 'text-slate-900 dark:text-white font-bold' : 'text-slate-400'}`}>{item.l}</div>
