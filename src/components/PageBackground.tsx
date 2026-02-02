@@ -42,10 +42,11 @@ const PageBackground: React.FC<PageBackgroundProps> = ({ pathname }) => {
 
                     {variant === 'about' && (
                         <>
-                            <div className="absolute top-[10%] left-[-20%] w-[80%] h-[1200px] bg-blue-600/5 dark:bg-blue-600/10 rounded-full blur-[140px]"></div>
-                            <div className="absolute top-[-5%] right-[-15%] w-[70%] h-[900px] bg-purple-500/5 dark:bg-purple-500/10 rounded-full blur-[120px]"></div>
-                            <div className="absolute bottom-[20%] right-[-10%] w-[60%] h-[1000px] bg-primary/5 dark:bg-primary/10 rounded-full blur-[130px]"></div>
-                            <div className="absolute top-[40%] left-[10%] w-[50%] h-[800px] bg-cyan-500/5 dark:bg-cyan-500/10 rounded-full blur-[110px]"></div>
+                            <div className="absolute top-[5%] left-[-20%] w-[80%] h-[1200px] bg-blue-600/5 dark:bg-blue-600/10 rounded-full blur-[140px]"></div>
+                            <div className="absolute top-[20%] right-[-15%] w-[70%] h-[900px] bg-purple-500/5 dark:bg-purple-500/10 rounded-full blur-[120px]"></div>
+                            <div className="absolute top-[45%] left-[-10%] w-[60%] h-[1000px] bg-primary/5 dark:bg-primary/10 rounded-full blur-[130px]"></div>
+                            <div className="absolute top-[65%] right-[-5%] w-[55%] h-[1100px] bg-cyan-500/5 dark:bg-cyan-500/10 rounded-full blur-[140px]"></div>
+                            <div className="absolute bottom-[10%] left-[-10%] w-[60%] h-[1000px] bg-blue-500/5 dark:bg-blue-500/10 rounded-full blur-[130px]"></div>
                         </>
                     )}
 
