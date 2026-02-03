@@ -104,17 +104,18 @@ const BlogPost: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12"
+                        className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16"
                     >
-                        <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white tracking-tight">
+                        <h2 className="text-3xl md:text-4xl font-display font-extrabold text-slate-900 dark:text-white tracking-tight">
                             Read <span className="text-primary">Next</span>
                         </h2>
-                        <Link to="/blog" className="text-sm font-bold uppercase tracking-widest border-b border-slate-300 dark:border-slate-700 pb-1 hover:text-primary hover:border-primary transition-colors">
-                            View All Articles
+                        <Link to="/blog" className="group inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+                            View All Blogs
+                            <span className="material-symbols-rounded text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
                         </Link>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                         {moreArticles.map((a, i) => (
                             <ArticleCard key={i} article={a as any} delay={i * 0.1} />
                         ))}
