@@ -11,6 +11,7 @@ import Work from './pages/Work';
 import Contact from './pages/Contact';
 import FreePrototypePage from './pages/FreePrototype';
 import ProjectDetail from './pages/Work/ProjectDetail';
+import BlogPost from './pages/Blog/BlogPost';
 
 // Components
 import Navbar from './components/Navbar';
@@ -44,6 +45,7 @@ const AppContent: React.FC<{ darkMode: boolean; toggleTheme: () => void }> = ({ 
             <Routes location={location}>
               <Route path="/" element={<Home />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:id" element={<BlogPost />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/work" element={<Work />} />
