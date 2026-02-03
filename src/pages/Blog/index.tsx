@@ -2,7 +2,7 @@ import React from 'react';
 import { articles } from './data';
 import ArticleCard from './ArticleCard';
 import BlogHeader from './BlogHeader';
-import BlogSidebar from './BlogSidebar';
+import FAQ from '../Home/FAQ';
 
 const BlogPage: React.FC = () => {
     return (
@@ -18,15 +18,14 @@ const BlogPage: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <BlogHeader />
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-                    <div className="lg:col-span-8">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                            {articles.map((article, index) => (
-                                <ArticleCard key={index} article={article} delay={index * 0.1} />
-                            ))}
-                        </div>
-                    </div>
-                    <BlogSidebar />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-24">
+                    {articles.map((article, index) => (
+                        <ArticleCard key={index} article={article} delay={index * 0.1} />
+                    ))}
+                </div>
+
+                <div className="space-y-24">
+                    <FAQ />
                 </div>
             </div>
         </div>

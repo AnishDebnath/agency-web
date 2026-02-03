@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 interface ArticleCardProps {
     article: {
         category: string;
-        readTime: string;
         title: string;
         desc: string;
         img: string;
@@ -18,47 +17,47 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, delay }) => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay, duration: 0.5 }}
-            className="group flex flex-col h-full bg-white dark:bg-slate-900/40 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-slate-200/60 dark:border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500"
+            transition={{ delay, duration: 0.6, ease: "easeOut" }}
+            className="group h-full"
         >
-            <div className="aspect-video relative overflow-hidden bg-slate-100 dark:bg-slate-800">
-                <img
-                    alt={article.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src={article.img}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+            <div className="bg-white dark:bg-slate-900/40 backdrop-blur-xl rounded-[2.5rem] border border-slate-200/60 dark:border-white/10 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 p-2.5 h-full flex flex-col">
+                {/* Image Container - Compacted */}
+                <div className="aspect-[16/10] relative overflow-hidden bg-slate-50 dark:bg-slate-800/50 rounded-[1.8rem] mb-3 border border-slate-100 dark:border-white/5">
+                    <img
+                        src={article.img}
+                        alt={article.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
 
-                {/* Floating Category Badge */}
-                <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-widest bg-white/90 dark:bg-black/80 backdrop-blur-md text-primary rounded-full shadow-sm">
-                        {article.category}
-                    </span>
-                </div>
-            </div>
-
-            <div className="p-6 md:p-8 flex flex-col flex-grow">
-                <div className="flex items-center gap-3 mb-4 text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
-                    <span className="flex items-center gap-1.5">
-                        <span className="material-symbols-rounded text-sm">schedule</span>
-                        {article.readTime}
-                    </span>
+                    {/* Floating Category Badge - More subtle */}
+                    <div className="absolute top-3 left-3">
+                        <span className="px-2.5 py-1 text-[8px] font-bold uppercase tracking-widest bg-white/95 dark:bg-slate-900/90 backdrop-blur-md text-primary rounded-full shadow-lg border border-white/20 dark:border-white/5">
+                            {article.category}
+                        </span>
+                    </div>
                 </div>
 
-                <h2 className="text-2xl font-display font-bold mb-3 leading-tight text-slate-900 dark:text-white group-hover:text-primary transition-colors duration-300">
-                    {article.title}
-                </h2>
+                {/* Content Area - Compacted Spacing */}
+                <div className="px-3 pb-3 flex flex-col flex-1">
+                    <h2 className="text-lg md:text-xl font-display font-extrabold text-slate-900 dark:text-white mb-2 tracking-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                        {article.title}
+                    </h2>
 
-                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">
-                    {article.desc}
-                </p>
+                    <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm leading-relaxed mb-4 line-clamp-2">
+                        {article.desc}
+                    </p>
 
-                <div className="mt-auto pt-6 border-t border-slate-100 dark:border-white/5 flex items-center justify-between group/link">
-                    <span className="text-sm font-bold text-slate-900 dark:text-white group-hover/link:text-primary transition-colors">
-                        Read Article
-                    </span>
-                    <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-white/5 flex items-center justify-center group-hover/link:bg-primary group-hover/link:text-white transition-all duration-300">
-                        <span className="material-symbols-rounded text-sm">arrow_forward</span>
+                    <div className="mt-auto pt-3 border-t border-slate-100 dark:border-white/5 flex items-center justify-between group/link">
+                        <span className="text-xs font-bold text-slate-900 dark:text-white group-hover/link:text-primary transition-colors">
+                            Read More
+                        </span>
+                        <motion.div
+                            whileHover={{ x: 3 }}
+                            className="w-8 h-8 rounded-full bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center group-hover/link:bg-primary group-hover/link:border-primary group-hover/link:text-white transition-all duration-300 shadow-sm"
+                        >
+                            <span className="material-symbols-rounded text-base">arrow_forward</span>
+                        </motion.div>
                     </div>
                 </div>
             </div>
