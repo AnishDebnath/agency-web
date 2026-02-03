@@ -25,7 +25,7 @@ const Carousel: React.FC<CarouselProps> = ({ windowWidth }) => {
 
     // Auto-play carousel
     useEffect(() => {
-        const timer = setInterval(handleNext, 8000);
+        const timer = setInterval(handleNext, 2000);
         return () => clearInterval(timer);
     }, []);
 
