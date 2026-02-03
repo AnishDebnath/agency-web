@@ -1,6 +1,7 @@
 import React from 'react';
 import AboutHeader from './AboutHeader';
 import AboutHeroImage from './AboutHeroImage';
+import BrandShowcase from '../../components/BrandShowcase';
 import AboutValues from './AboutValues';
 import AboutStats from './AboutStats';
 import AboutTeam from './AboutTeam';
@@ -21,6 +22,9 @@ const AboutPage: React.FC = () => {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-24">
                 <AboutHeader />
+                <div className="mb-24 -mx-4 sm:-mx-6 lg:-mx-8">
+                    <BrandShowcase />
+                </div>
                 <AboutHeroImage />
                 <AboutStats />
                 <AboutValues />

@@ -13,6 +13,7 @@ import Testimonials from './Testimonials';
 import FAQ from './FAQ';
 import Blog from './Blog';
 import MarqueeWork from './MarqueeWork';
+import BrandShowcase from '../../components/BrandShowcase';
 
 const Home: React.FC = () => {
     const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
@@ -29,6 +30,7 @@ const Home: React.FC = () => {
             <Carousel windowWidth={windowWidth} />
             <Marquee />
             <About />
+            <BrandShowcase />
             <FreePrototype />
             <WhyChooseUs />
             <Services />
