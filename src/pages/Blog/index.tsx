@@ -18,7 +18,7 @@ const BlogPage: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <BlogHeader />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
                     {articles.map((article, index) => (
                         <ArticleCard key={index} article={article} delay={index * 0.1} />
                     ))}
