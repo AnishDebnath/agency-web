@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, animate } from 'framer-motion';
 import PrototypeForm from './PrototypeForm';
-// import FAQ from '../Home/FAQ';
+import Process from '../Home/Process';
+import OurSolution from '../Home/OurSolution';
+import FAQ from '../Home/FAQ';
 
 const CountUp: React.FC<{ val: number }> = ({ val }) => {
     const [count, setCount] = useState(0);
@@ -125,7 +127,7 @@ const FreePrototypePage: React.FC = () => {
                                     hidden: { opacity: 0, y: 20 },
                                     show: { opacity: 1, y: 0, transition: { delay: 0.6, duration: 0.6 } }
                                 }}
-                                className="flex flex-col sm:flex-row items-center justify-start gap-4 mt-10 pt-10 border-t border-slate-200/50 dark:border-slate-800/50"
+                                className="flex flex-col sm:flex-row items-center justify-start gap-4 mt-10 pt-10 border-t border-slate-300 dark:border-slate-600"
                             >
                                 <div
                                     className="flex items-center h-16 cursor-pointer"
@@ -173,9 +175,11 @@ const FreePrototypePage: React.FC = () => {
             </div>
 
             {/* FAQ Section */}
-            {/* <div className="pb-24">
+            <div className="pb-24">
+                <Process />
+                <OurSolution />
                 <FAQ />
-            </div> */}
+            </div>
         </div>
     );
 };
