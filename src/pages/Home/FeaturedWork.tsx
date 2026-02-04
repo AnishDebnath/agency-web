@@ -1,6 +1,31 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { featuredWork } from './data';
+const featuredWork = [
+    {
+        title: "Naka",
+        category: "Framer Development",
+        img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+        featured: true
+    },
+    {
+        title: "Signal Spark",
+        category: "Branding Design",
+        img: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80",
+        featured: true
+    },
+    {
+        title: "Lumenhaus",
+        category: "Web Development",
+        img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80",
+        featured: false
+    },
+    {
+        title: "Drift Bloom",
+        category: "Branding Design",
+        img: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80",
+        featured: false
+    }
+];
 
 const FeaturedWork: React.FC = () => {
     return (

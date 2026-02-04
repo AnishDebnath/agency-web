@@ -1,6 +1,31 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { homeFaqs } from './data';
+const homeFaqs = [
+    {
+        q: "What’s included in the video editing service?",
+        a: "Our service covers everything from raw footage assembly and color grading to sound design and motion graphics. We also provide thumbnail design and vertical cutdowns for social media."
+    },
+    {
+        q: "How long does a typical editing project take?",
+        a: "Most Shorts and Reels are delivered within 24-48 hours. Long-form projects typically take 3-5 days, depending on the complexity and amount of raw footage."
+    },
+    {
+        q: "Which editing software do you use?",
+        a: "We primary work in Adobe Premiere Pro and DaVinci Resolve for high-end color grading. We also use CapCut for snappy, vertical-first social content."
+    },
+    {
+        q: "Are there any hidden costs for stock assets?",
+        a: "No. We have subscriptions to high-quality stock libraries like Artlist and Epidemic Sound, so you don't have to worry about copyright or extra fees."
+    },
+    {
+        q: "How do I send my large footage files?",
+        a: "We recommend using Google Drive, Dropbox, or WeTransfer. Once you sign up, we'll set up a dedicated shared folder for seamless file transfers."
+    },
+    {
+        q: "What if I want a specific style of edit?",
+        a: "We offer a 'Style Match' service. Send us a link to a creator or video you admire, and we'll analyze and replicate that pacing, style, and energy."
+    }
+];
 
 const FAQ: React.FC = () => {
     const [openFAQ, setOpenFAQ] = useState<number | null>(0);

@@ -1,7 +1,53 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { teamMembers } from './data';
 import TeamMember from './TeamMember';
+
+const teamMembers = [
+    {
+        name: "Alex Rivera",
+        role: "Founder & Lead Editor",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+        socials: {
+            twitter: "https://twitter.com",
+            linkedin: "https://linkedin.com",
+            instagram: "https://instagram.com",
+            website: "https://creatorflow.com"
+        }
+    },
+    {
+        name: "Sarah Chen",
+        role: "Creative Director",
+        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+        socials: {
+            twitter: "https://twitter.com",
+            linkedin: "https://linkedin.com",
+            instagram: "https://instagram.com",
+            website: "https://creatorflow.com"
+        }
+    },
+    {
+        name: "Marcus Johnson",
+        role: "Motion Designer",
+        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+        socials: {
+            twitter: "https://twitter.com",
+            linkedin: "https://linkedin.com",
+            instagram: "https://instagram.com",
+            website: "https://creatorflow.com"
+        }
+    },
+    {
+        name: "Emily Davis",
+        role: "Account Manager",
+        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+        socials: {
+            twitter: "https://twitter.com",
+            linkedin: "https://linkedin.com",
+            instagram: "https://instagram.com",
+            website: "https://creatorflow.com"
+        }
+    }
+];
 
 const AboutTeam: React.FC = () => {
     return (

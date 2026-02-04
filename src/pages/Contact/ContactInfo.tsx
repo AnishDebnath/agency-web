@@ -1,6 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { motion, animate } from 'framer-motion';
-import { contactInfo } from './data';
+
+const contactInfo = [
+    {
+        title: "Email Us",
+        value: "ajoy.sayhello@gmail.com",
+        icon: "mail",
+        color: "blue"
+    },
+    {
+        title: "Call Us",
+        value: "+44 (0) 20 7946 0123",
+        icon: "call",
+        color: "blue"
+    },
+    {
+        title: "Visit Us",
+        value: "123 Creator Lane, London, UK",
+        icon: "location_on",
+        color: "orange"
+    }
+];
 
 const CountUp: React.FC<{ val: number }> = ({ val }) => {
     const [count, setCount] = useState(0);

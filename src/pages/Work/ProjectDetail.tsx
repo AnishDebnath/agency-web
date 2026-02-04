@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { projects } from './data';
+import { projects } from './index';
 
 const ProjectDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();

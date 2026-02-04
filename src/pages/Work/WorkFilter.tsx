@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { categories } from './data';
+
+export const categories = ["All", "Long-form", "Shorts", "Vlog", "Educational"];
 
 interface WorkFilterProps {
     activeCategory: string;
@@ -18,8 +19,8 @@ const WorkFilter: React.FC<WorkFilterProps> = ({ activeCategory, setActiveCatego
                         whileTap={{ scale: 0.98 }}
                         onClick={() => setActiveCategory(cat)}
                         className={`relative px-6 py-2.5 rounded-full text-sm font-bold tracking-tight transition-all duration-300 ${activeCategory === cat
-                                ? 'text-white'
-                                : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                            ? 'text-white'
+                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                             }`}
                     >
                         <span className="relative z-10">{cat}</span>

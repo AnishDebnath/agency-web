@@ -1,6 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { carouselItemsData as carouselItems } from './data';
+
+const carouselItems = [
+    {
+        title: "Master the Art of Vertical Content",
+        desc: "Our editors use psychological triggers to keep your audience scrolling and engaged for longer.",
+        img: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=80",
+        type: "hero" as const,
+        badge: "Retention Expert"
+    },
+    {
+        img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
+        type: "app" as const,
+        bg: "bg-slate-100"
+    },
+    {
+        img: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?auto=format&fit=crop&w=1200&q=80",
+        type: "dashboard" as const,
+        bg: "bg-[#0A0A0A]"
+    }
+];
 
 interface CarouselProps {
     windowWidth: number;

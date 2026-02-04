@@ -1,6 +1,39 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { services } from './data';
+const services = [
+    {
+        title: "Youtube Shorts Editing",
+        desc: "We turn raw clips into high-retention, caption-packed vertical videos that pop on Reels, Shorts, and TikTok. Great for content repurposing and explosive growth.",
+        tags: [
+            { text: "Snappy Pacing", icon: "tune" },
+            { text: "Viral-Ready", icon: "campaign" },
+            { text: "Subtitled", icon: "subtitles" }
+        ]
+    },
+    {
+        title: "Long Form Edits",
+        desc: "From vlogs to deep dives, we trim the fluff, tighten the pacing.",
+        tags: [
+            { text: "Retention-Driven", icon: "rocket_launch" }
+        ]
+    },
+    {
+        title: "Thumbnail Design",
+        desc: "High-converting designs that stop the scroll. We analyze what works in your niche to get you the click.",
+        tags: [
+            { text: "Click Magnet", icon: "ads_click" }
+        ]
+    },
+    {
+        title: "Content Repurposing Package",
+        desc: "One video, 10 pieces of content — cut into Shorts, Reels, quote cards, and teasers. Perfect for creators who want to stay visible everywhere.",
+        tags: [
+            { text: "Multi-Platform", icon: "hub" },
+            { text: "Batch Delivery", icon: "inventory_2" },
+            { text: "Quick", icon: "trending_up" }
+        ]
+    }
+];
 
 const Services: React.FC = () => {
     return (
