@@ -27,9 +27,7 @@ const servicesList = [
 ];
 import ServiceItem from './ServiceItem';
 import ServicesHeader from './ServicesHeader';
-import FAQ from '../Home/FAQ';
-import Process from '../Home/Process';
-import WhyChooseUs from '../Home/WhyChooseUs';
+import { FAQ, Process, WhyChooseUs } from '../../components';
 
 const ServicesPage: React.FC = () => {
     return (

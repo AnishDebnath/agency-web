@@ -1,12 +1,10 @@
 import React from 'react';
 import AboutHeader from './AboutHeader';
 import AboutHeroImage from './AboutHeroImage';
-import BrandShowcase from '../../components/BrandShowcase';
 import AboutValues from './AboutValues';
 import AboutStats from './AboutStats';
 import AboutTeam from './AboutTeam';
-import WhyChooseUs from '../Home/WhyChooseUs';
-import WorkTestimonials from '../Work/WorkTestimonials';
+import { WhyChooseUs, WorkTestimonials, BrandShowcase } from '../../components';
 
 
 const AboutPage: React.FC = () => {

@@ -54,7 +54,7 @@ export const articles = [
 ];
 import ArticleCard from './ArticleCard';
 import BlogHeader from './BlogHeader';
-import FAQ from '../Home/FAQ';
+import { FAQ } from '../../components';
 
 const BlogPage: React.FC = () => {
     return (

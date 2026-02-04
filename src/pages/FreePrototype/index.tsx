@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, animate } from 'framer-motion';
 import PrototypeForm from './PrototypeForm';
-import Process from '../Home/Process';
-import OurSolution from '../Home/OurSolution';
-import FAQ from '../Home/FAQ';
+import { Process, OurSolution, FAQ } from '../../components';
 
 const CountUp: React.FC<{ val: number }> = ({ val }) => {
     const [count, setCount] = useState(0);

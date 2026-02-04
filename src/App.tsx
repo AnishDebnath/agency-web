@@ -14,8 +14,7 @@ import ProjectDetail from './pages/Work/ProjectDetail';
 import BlogPost from './pages/Blog/BlogPost';
 
 // Components
-import Navbar from './components/Navbar';
-import Layout from './components/Layout';
+import { Navbar, Layout } from './components';
 
 // Scroll to top component
 const ScrollToTop = () => {

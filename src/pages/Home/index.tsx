@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import {
+    FreePrototype,
+    WhyChooseUs,
+    Process,
+    FAQ,
+    BrandShowcase,
+    OurSolution
+} from '../../components';
 import Hero from './Hero';
 import Carousel from './Carousel';
 import Marquee from './Marquee';
 import About from './About';
-import FreePrototype from '../../components/FreePrototype';
-import WhyChooseUs from './WhyChooseUs';
 import Services from './Services';
-import Process from './Process';
 import FeaturedWork from './FeaturedWork';
-import OurSolution from './OurSolution';
 import Testimonials from './Testimonials';
-import FAQ from './FAQ';
 import Blog from './Blog';
 import MarqueeWork from './MarqueeWork';
-import BrandShowcase from '../../components/BrandShowcase';
 
 const Home: React.FC = () => {
     const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);

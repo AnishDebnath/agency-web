@@ -1,7 +1,7 @@
 import React from 'react';
 import ContactForm from './ContactForm';
 import ContactInfo from './ContactInfo';
-import FAQ from '../Home/FAQ';
+import { FAQ } from '../../components';
 
 const ContactPage: React.FC = () => {
     return (

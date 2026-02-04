@@ -3,9 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import WorkHeader from './WorkHeader';
 import WorkFilter, { categories } from './WorkFilter';
-import FreePrototype from '../../components/FreePrototype';
-import Process from '../Home/Process';
-import WorkTestimonials from './WorkTestimonials';
+import { FreePrototype, Process, WorkTestimonials } from '../../components';
 
 export interface Project {
     id: string;
