@@ -1,25 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, useInView, animate } from 'framer-motion';
-
-const CountUp: React.FC<{ val: number; delay?: number }> = ({ val, delay = 0 }) => {
-    const [count, setCount] = useState(0);
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-
-    useEffect(() => {
-        if (isInView) {
-            const controls = animate(0, val, {
-                duration: 2,
-                delay: delay,
-                ease: "easeOut",
-                onUpdate: (value) => setCount(Math.floor(value)),
-            });
-            return () => controls.stop();
-        }
-    }, [isInView, val, delay]);
-
-    return <span ref={ref}>{count.toString().padStart(2, '0')}</span>;
-};
+import React, { useState, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const WhyChooseUs: React.FC = () => {
     return (
@@ -71,7 +51,7 @@ const WhyChooseUs: React.FC = () => {
                         transition={{ delay: 0.3 }}
                         className="flex flex-col group bg-white dark:bg-slate-900 rounded-[2.5rem] p-4 shadow-xl border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-300"
                     >
-                        <div className="bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] h-[320px] mb-8 relative overflow-hidden flex items-center justify-center p-8 border border-slate-100 dark:border-slate-800">
+                        <div className="bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] h-[270px] mb-8 relative overflow-hidden flex items-center justify-center p-8 border border-slate-100 dark:border-slate-800">
                             <div className="grid grid-cols-3 gap-6 opacity-30 absolute inset-0 p-8 place-content-center">
                                 {[...Array(9)].map((_, i) => (
                                     <div key={i} className="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-700 mx-auto"></div>
@@ -98,7 +78,7 @@ const WhyChooseUs: React.FC = () => {
                         transition={{ delay: 0.4 }}
                         className="flex flex-col group bg-white dark:bg-slate-900 rounded-[2.5rem] p-4 shadow-xl border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-300"
                     >
-                        <div className="bg-[#0A0A0A] rounded-[2.5rem] h-[320px] mb-8 relative overflow-hidden border border-slate-800 flex select-none">
+                        <div className="bg-[#0A0A0A] rounded-[2.5rem] h-[270px] mb-8 relative overflow-hidden border border-slate-800 flex select-none">
                             <div className="hidden sm:flex w-16 h-full border-r border-white/10 flex-col p-3 gap-3 shrink-0">
                                 <div className="flex gap-1.5 mb-2">
                                     <div className="w-2 h-2 rounded-full bg-red-500/80"></div>
@@ -149,7 +129,7 @@ const WhyChooseUs: React.FC = () => {
                         transition={{ delay: 0.5 }}
                         className="flex flex-col group bg-white dark:bg-slate-900 rounded-[2.5rem] p-4 shadow-xl border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-300"
                     >
-                        <div className="bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] h-[320px] mb-8 relative overflow-hidden flex items-center justify-center gap-3 md:gap-4 px-4 md:px-8 border border-slate-100 dark:border-slate-800">
+                        <div className="bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] h-[270px] mb-8 relative overflow-hidden flex items-center justify-center gap-3 md:gap-4 px-4 md:px-8 border border-slate-100 dark:border-slate-800">
                             {[
                                 { d: 2, l: 'Discovery' },
                                 { d: 6, l: 'Development' },
@@ -167,7 +147,7 @@ const WhyChooseUs: React.FC = () => {
                                             : 'bg-transparent text-slate-900 dark:text-white'}
                              `}>
                                         <span className="text-4xl font-bold tracking-tight">
-                                            <CountUp val={item.d} delay={0.6 + (i * 0.1)} />
+                                            {item.d.toString().padStart(2, '0')}
                                         </span>
                                     </div>
                                     <div className="text-center py-2">
