@@ -40,8 +40,8 @@ const ContactForm: React.FC = () => {
                     <textarea required rows={4} className="w-full bg-slate-50/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about your inquiry..."></textarea>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-                    <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+                <div className="flex flex-col sm:flex-row items-center justify-between pt-2">
+                    <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 px-8">
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>

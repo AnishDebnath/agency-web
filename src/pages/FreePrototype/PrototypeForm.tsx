@@ -1,47 +1,128 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const projectTypes = [
+    { label: "Web Design", value: "web-design" },
+    { label: "Web Development", value: "web-dev" },
+    { label: "App Design", value: "app-design" },
+    { label: "App Development", value: "app-dev" },
+    { label: "Branding / Identity", value: "branding" },
+    { label: "Other", value: "other" },
+];
 
 const PrototypeForm: React.FC = () => {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [selectedProject, setSelectedProject] = useState("");
+
+    const handleSelect = (value: string) => {
+        setSelectedProject(value);
+        setIsDropdownOpen(false);
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-white dark:bg-slate-900 p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-slate-100 dark:border-slate-800 relative overflow-hidden"
+            className="relative overflow-hidden bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl p-6 md:p-10 rounded-[2.5rem] shadow-2xl border border-white/20 dark:border-slate-800/50"
         >
             {/* Decorative Ribbon */}
-            <div className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold uppercase tracking-widest py-1 px-8 rotate-45 translate-x-[30%] translate-y-[50%] shadow-lg">
+            <div className="absolute top-0 right-0 bg-gradient-to-r from-primary to-orange-600 text-white text-[10px] font-bold uppercase tracking-widest py-1 px-10 rotate-45 translate-x-[25%] translate-y-[40%] shadow-lg z-10">
                 Free
             </div>
 
-            <form className="space-y-6">
+            {/* Decorative gradient blobs */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+
+            <form className="relative space-y-5 z-0" onClick={() => isDropdownOpen && setIsDropdownOpen(false)}>
                 <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 dark:text-slate-300">Name</label>
-                    <input type="text" className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Your Name" />
+                    <label className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Full Name <span className="text-primary">*</span></label>
+                    <input required type="text" className="w-full bg-slate-50/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all placeholder:text-slate-400" placeholder="John Doe" />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div className="space-y-2">
+                        <label className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Email </label>
+                        <input type="email" className="w-full bg-slate-50/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all placeholder:text-slate-400" placeholder="name@company.com" />
+                    </div>
+                    <div className="space-y-2">
+                        <label className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Phone No <span className="text-primary">*</span></label>
+                        <input required type="tel" className="w-full bg-slate-50/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all placeholder:text-slate-400" placeholder="+1 (555) 000-0000" />
+                    </div>
+                </div>
+
+                <div className="space-y-2 relative">
+                    <label className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Project Type <span className="text-primary">*</span></label>
+                    <div className="relative">
+                        <button
+                            type="button"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setIsDropdownOpen(!isDropdownOpen);
+                            }}
+                            className={`w-full text-left bg-slate-50/50 dark:bg-slate-800/50 border rounded-2xl px-5 py-4 flex items-center justify-between outline-none transition-all ${isDropdownOpen ? 'border-primary ring-2 ring-primary/20' : 'border-slate-200 dark:border-slate-700 hover:border-primary/50'}`}
+                        >
+                            <span className={selectedProject ? "text-slate-900 dark:text-white" : "text-slate-400"}>
+                                {selectedProject ? projectTypes.find(t => t.value === selectedProject)?.label : "Select a project type"}
+                            </span>
+                            <span className={`material-symbols-rounded text-slate-500 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}>expand_more</span>
+                        </button>
+
+                        <AnimatePresence>
+                            {isDropdownOpen && (
+                                <motion.ul
+                                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="absolute top-full left-0 w-full mt-2 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl shadow-xl overflow-hidden z-20"
+                                >
+                                    {projectTypes.map((type) => (
+                                        <li
+                                            key={type.value}
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                handleSelect(type.value);
+                                            }}
+                                            className={`px-5 py-3 cursor-pointer transition-colors flex items-center justify-between ${selectedProject === type.value
+                                                ? 'bg-primary/5 text-primary font-medium'
+                                                : 'text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50'
+                                                }`}
+                                        >
+                                            {type.label}
+                                            {selectedProject === type.value && (
+                                                <span className="material-symbols-rounded text-primary text-sm">check</span>
+                                            )}
+                                        </li>
+                                    ))}
+                                </motion.ul>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                    {/* Hidden input for form submission if needed */}
+                    <input type="hidden" name="projectType" value={selectedProject} required />
                 </div>
 
                 <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 dark:text-slate-300">Work Email</label>
-                    <input type="email" className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="name@company.com" />
+                    <label className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Current Website <span className="text-slate-400 font-normal text-xs ml-1">(Optional)</span></label>
+                    <input type="url" className="w-full bg-slate-50/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all placeholder:text-slate-400" placeholder="https://www.yourbrandsite.com" />
                 </div>
 
                 <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 dark:text-slate-300">Current Website (Optional)</label>
-                    <input type="url" className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="https://www.yourbrandsite.com" />
+                    <label className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Project Description <span className="text-primary">*</span></label>
+                    <textarea required rows={3} className="w-full bg-slate-50/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all resize-none placeholder:text-slate-400" placeholder="Tell us about the problem you want to solve..."></textarea>
                 </div>
 
-                <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 dark:text-slate-300">What specific problem do you want to solve?</label>
-                    <textarea rows={3} className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="E.g., Low conversion rate, outdated design..."></textarea>
-                </div>
-
-                <button className="w-full bg-gradient-to-r from-primary to-[#FF8C00] text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-primary/25 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
-                    <span className="material-symbols-rounded">rocket_launch</span>
-                    Claim Free Prototype
+                <button className="w-full group relative overflow-hidden bg-[#111] dark:bg-white text-white dark:text-[#111] py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-primary/20 hover:scale-[1.01] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-3">
+                    <span className="relative z-10">Claim Free Prototype</span>
+                    <div className="w-8 h-8 bg-white/20 dark:bg-black/10 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
+                        <span className="material-symbols-rounded text-lg">rocket_launch</span>
+                    </div>
                 </button>
 
-                <p className="text-xs text-center text-slate-400 mt-4">
-                    *No credit card required. No commitment. 100% Free.
+                <p className="text-xs text-center text-slate-400 font-medium">
+                    *No advance payment required. 100% Free.
                 </p>
             </form>
         </motion.div>
