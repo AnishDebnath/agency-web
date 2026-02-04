@@ -124,25 +124,25 @@ const Hero: React.FC = () => {
                     className="text-5xl md:text-7xl lg:text-[7.5rem] font-display font-extrabold tracking-tighter leading-[1.05] text-[#111] dark:text-white"
                 >
                     <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 md:gap-x-6">
-                        <span>Effortless</span>
+                        <span>Premium</span>
                         <motion.span
                             whileHover={{ scale: 1.05, rotate: -2 }}
                             className="relative inline-flex w-20 h-12 md:w-32 md:h-20 lg:w-40 lg:h-24 rounded-full overflow-hidden items-center justify-center bg-orange-100 align-middle shadow-inner"
                         >
-                            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=300&q=80" className="w-full h-full object-cover opacity-90" alt="Video" />
+                            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=300&q=80" className="w-full h-full object-cover opacity-90" alt="Digital" />
                         </motion.span>
-                        <span className="text-[#FF5C00]">Editing</span>
+                        <span className="text-[#FF5C00]">Digital</span>
                     </div>
 
                     <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 md:gap-x-6 mt-2">
-                        <span className="text-slate-400">for</span>
+                        <span className="text-slate-400">Solutions for</span>
                         <motion.span
                             whileHover={{ scale: 1.05, rotate: 2 }}
                             className="relative inline-flex w-20 h-12 md:w-32 md:h-20 lg:w-40 lg:h-24 rounded-full overflow-hidden items-center justify-center bg-slate-200 align-middle shadow-inner"
                         >
-                            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=300&q=80" className="w-full h-full object-cover" alt="Creator" />
+                            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=300&q=80" className="w-full h-full object-cover" alt="Business" />
                         </motion.span>
-                        <span>Content Creators</span>
+                        <span>Modern Businesses</span>
                     </div>
 
                     <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 md:gap-x-6 mt-2">
@@ -164,7 +164,7 @@ const Hero: React.FC = () => {
                     transition={{ delay: 0.6, duration: 0.8 }}
                     className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mt-10 leading-relaxed font-medium"
                 >
-                    We make it easy for creators to publish, grow, and scale with high-retention, conversion focused edits — no delays, no drama.
+                    We build stunning websites, powerful SaaS products, and deliver exceptional social media services that help your business grow and thrive in the digital world.
                 </motion.p>
 
                 {/* CTA */}

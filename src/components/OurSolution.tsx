@@ -5,19 +5,19 @@ const OurSolution: React.FC = () => {
     const [highlightSolution, setHighlightSolution] = React.useState(true);
 
     const problems = [
-        "Editing takes me forever.",
-        "I miss uploads trying to finish videos.",
-        "I hate editing. I just want to record.",
-        "My videos don't look pro enough.",
-        "Captions are a pain to add."
+        "Website development takes too long.",
+        "Can't find reliable developers.",
+        "My online presence looks unprofessional.",
+        "Social media management is overwhelming.",
+        "Building a SaaS product seems impossible."
     ];
 
     const solutions = [
-        "Done-for-you edits, always on time.",
-        "Fast turnaround",
-        "You record. We handle the rest.",
-        "Cinematic, clean, and branded.",
-        "Burned-in, style-matched captions."
+        "Fast, professional development.",
+        "Dedicated expert team.",
+        "Premium, conversion-optimized designs.",
+        "Full-service social media support.",
+        "End-to-end SaaS development."
     ];
 
     return (
@@ -38,7 +38,7 @@ const OurSolution: React.FC = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 dark:text-white mb-6"
                     >
-                        Why Most Creators Burn Out
+                        Why Most Businesses Struggle Online
                     </motion.h2>
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -48,7 +48,7 @@ const OurSolution: React.FC = () => {
                         className="flex flex-col items-center gap-6"
                     >
                         <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                            A quick side-by-side of the struggles you shouldn’t have to deal with and how we make sure you don’t.
+                            A quick side-by-side of the challenges you shouldn't have to face and how we solve them for you.
                         </p>
 
                         {/* Comparison Toggle */}
@@ -79,7 +79,7 @@ const OurSolution: React.FC = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
                             {/* Problems Column */}
                             <div className={`flex flex-col p-8 md:p-12 transition-all duration-500 ${highlightSolution ? 'opacity-50 blur-[1px] grayscale' : 'opacity-100'}`}>
-                                <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 mb-12 text-center">Creators Problem</h3>
+                                <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 mb-12 text-center">Business Challenges</h3>
                                 <ul className="space-y-8">
                                     {problems.map((problem, idx) => (
                                         <motion.li

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export const categories = ["All", "Long-form", "Shorts", "Vlog", "Educational"];
+export const categories = ["All", "Website Templates", "Custom Websites", "SaaS Products", "Social Media"];
 
 interface WorkFilterProps {
     activeCategory: string;

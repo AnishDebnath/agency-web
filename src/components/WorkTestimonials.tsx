@@ -114,7 +114,7 @@ const WorkTestimonials: React.FC = () => {
                     transition={{ delay: 0.2 }}
                     className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
                 >
-                    Join 100+ creators and brands who have accelerated their growth with our premium editing and strategic solutions.
+                    Join 100+ businesses and brands who have accelerated their growth with our premium digital solutions and strategic expertise.
                 </motion.p>
             </div>
 

@@ -49,7 +49,7 @@ const WhyChooseUs: React.FC = () => {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-6xl font-display font-extrabold mt-4 mb-6 text-slate-900 dark:text-white"
                     >
-                        Why everyone loves CreatorFlow
+                        Why businesses choose us
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -58,7 +58,7 @@ const WhyChooseUs: React.FC = () => {
                         transition={{ delay: 0.2 }}
                         className="text-lg text-slate-500 dark:text-slate-400"
                     >
-                        There’s a reason studios keep choosing CreatorFlow, it just gets what you need to stand out and make an impact.
+                        There's a reason businesses keep choosing us - we deliver exceptional digital solutions that drive real growth and make a lasting impact.
                     </motion.p>
                 </div>
 
@@ -85,8 +85,8 @@ const WhyChooseUs: React.FC = () => {
                             </motion.div>
                         </div>
                         <div className="px-2 pb-4">
-                            <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Bold and purposeful</h3>
-                            <p className="text-slate-500 text-sm leading-relaxed">Our edits make a statement, every cut, sound effect, and transition chosen with intention to keep viewers hooked.</p>
+                            <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Strategic & Purposeful</h3>
+                            <p className="text-slate-500 text-sm leading-relaxed">Our solutions are crafted with intention, every design choice and technical decision made to achieve your business goals.</p>
                         </div>
                     </motion.div>
 
@@ -136,8 +136,8 @@ const WhyChooseUs: React.FC = () => {
                             </div>
                         </div>
                         <div className="px-2 pb-4">
-                            <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Easy to customize</h3>
-                            <p className="text-slate-500 text-sm leading-relaxed">We tailor every project to fit your needs, style, and vision, ensuring your space feels uniquely yours from start to finish.</p>
+                            <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Fully Customizable</h3>
+                            <p className="text-slate-500 text-sm leading-relaxed">We tailor every project to fit your brand, goals, and vision, ensuring your digital presence feels uniquely yours from start to finish.</p>
                         </div>
                     </motion.div>
 
@@ -151,9 +151,9 @@ const WhyChooseUs: React.FC = () => {
                     >
                         <div className="bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] h-[320px] mb-8 relative overflow-hidden flex items-center justify-center gap-3 md:gap-4 px-4 md:px-8 border border-slate-100 dark:border-slate-800">
                             {[
-                                { d: 2, l: 'Raw Footage' },
-                                { d: 6, l: 'Assembly' },
-                                { d: 24, l: 'Final Cut', highlight: true }
+                                { d: 2, l: 'Discovery' },
+                                { d: 6, l: 'Development' },
+                                { d: 24, l: 'Launch', highlight: true }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}

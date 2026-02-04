@@ -40,7 +40,7 @@ const CTA: React.FC = () => {
                             transition={{ delay: 0.3 }}
                             className="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-slate-900 leading-[1.1] mb-8"
                         >
-                            Ready to start your next project?
+                            Ready to transform your digital presence?
                         </motion.h2>
                         <motion.button
                             initial={{ opacity: 0, y: 20 }}

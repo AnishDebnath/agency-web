@@ -2,35 +2,37 @@ import React from 'react';
 import { motion } from 'framer-motion';
 const services = [
     {
-        title: "Youtube Shorts Editing",
-        desc: "We turn raw clips into high-retention, caption-packed vertical videos that pop on Reels, Shorts, and TikTok. Great for content repurposing and explosive growth.",
+        title: "Website Templates",
+        desc: "Premium, ready-to-use website templates that are fully customizable, responsive, and optimized for conversions. Perfect for businesses that need a professional online presence fast.",
         tags: [
-            { text: "Snappy Pacing", icon: "tune" },
-            { text: "Viral-Ready", icon: "campaign" },
-            { text: "Subtitled", icon: "subtitles" }
+            { text: "Fully Responsive", icon: "devices" },
+            { text: "SEO Optimized", icon: "search" },
+            { text: "Easy Customization", icon: "tune" }
         ]
     },
     {
-        title: "Long Form Edits",
-        desc: "From vlogs to deep dives, we trim the fluff, tighten the pacing.",
+        title: "Custom Website Development",
+        desc: "Bespoke websites tailored to your brand and business goals. From landing pages to complex web applications, we build digital experiences that convert.",
         tags: [
-            { text: "Retention-Driven", icon: "rocket_launch" }
+            { text: "Tailored Design", icon: "palette" },
+            { text: "Performance Focused", icon: "rocket_launch" }
         ]
     },
     {
-        title: "Thumbnail Design",
-        desc: "High-converting designs that stop the scroll. We analyze what works in your niche to get you the click.",
+        title: "Social Media Services",
+        desc: "Comprehensive social media management, content creation, and strategy that builds your brand and engages your audience across all platforms.",
         tags: [
-            { text: "Click Magnet", icon: "ads_click" }
+            { text: "Content Strategy", icon: "campaign" },
+            { text: "Multi-Platform", icon: "hub" }
         ]
     },
     {
-        title: "Content Repurposing Package",
-        desc: "One video, 10 pieces of content — cut into Shorts, Reels, quote cards, and teasers. Perfect for creators who want to stay visible everywhere.",
+        title: "SaaS Product Development",
+        desc: "We build scalable, cloud-based software solutions that solve real problems. From MVP to full-scale product, we handle the entire development lifecycle.",
         tags: [
-            { text: "Multi-Platform", icon: "hub" },
-            { text: "Batch Delivery", icon: "inventory_2" },
-            { text: "Quick", icon: "trending_up" }
+            { text: "Scalable Architecture", icon: "cloud" },
+            { text: "User-Centric Design", icon: "person" },
+            { text: "Agile Development", icon: "trending_up" }
         ]
     }
 ];
@@ -70,7 +72,7 @@ const Services: React.FC = () => {
                         transition={{ delay: 0.2 }}
                         className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed"
                     >
-                        We craft scroll-stopping edits that keep your audience hooked and your content looking top-tier.
+                        We deliver comprehensive digital solutions that transform your business. From stunning websites to powerful SaaS products, we've got you covered.
                     </motion.p>
                 </div>
 

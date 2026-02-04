@@ -2,28 +2,28 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 const homeFaqs = [
     {
-        q: "What’s included in the video editing service?",
-        a: "Our service covers everything from raw footage assembly and color grading to sound design and motion graphics. We also provide thumbnail design and vertical cutdowns for social media."
+        q: "What services do you offer?",
+        a: "We offer website templates, custom website development, social media management, and SaaS product development. Each service is tailored to meet your specific business needs and goals."
     },
     {
-        q: "How long does a typical editing project take?",
-        a: "Most Shorts and Reels are delivered within 24-48 hours. Long-form projects typically take 3-5 days, depending on the complexity and amount of raw footage."
+        q: "How long does a typical project take?",
+        a: "Website templates are available immediately. Custom websites typically take 2-4 weeks, while SaaS products take 8-12 weeks depending on complexity. We'll provide a detailed timeline during our initial consultation."
     },
     {
-        q: "Which editing software do you use?",
-        a: "We primary work in Adobe Premiere Pro and DaVinci Resolve for high-end color grading. We also use CapCut for snappy, vertical-first social content."
+        q: "What technologies do you use?",
+        a: "We use modern, industry-standard technologies including React, Next.js, Node.js, and cloud platforms like AWS. We choose the best tech stack for each project based on your specific requirements."
     },
     {
-        q: "Are there any hidden costs for stock assets?",
-        a: "No. We have subscriptions to high-quality stock libraries like Artlist and Epidemic Sound, so you don't have to worry about copyright or extra fees."
+        q: "Do you provide ongoing support after launch?",
+        a: "Yes! We offer maintenance packages and ongoing support for all our projects. This includes updates, bug fixes, and technical assistance to ensure your digital solution continues to perform optimally."
     },
     {
-        q: "How do I send my large footage files?",
-        a: "We recommend using Google Drive, Dropbox, or WeTransfer. Once you sign up, we'll set up a dedicated shared folder for seamless file transfers."
+        q: "Can you help with existing projects?",
+        a: "Absolutely. We can take over existing projects, provide audits, optimize performance, or add new features. We'll assess your current setup and provide recommendations."
     },
     {
-        q: "What if I want a specific style of edit?",
-        a: "We offer a 'Style Match' service. Send us a link to a creator or video you admire, and we'll analyze and replicate that pacing, style, and energy."
+        q: "What makes your agency different?",
+        a: "We combine technical expertise with strategic thinking. Every project is approached with your business goals in mind, ensuring we deliver solutions that not only look great but drive real results."
     }
 ];
 

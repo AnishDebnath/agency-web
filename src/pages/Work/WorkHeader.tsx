@@ -36,7 +36,7 @@ const WorkHeader: React.FC = () => {
                 transition={{ delay: 0.3, duration: 0.8 }}
                 className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mt-10 leading-relaxed font-medium px-4"
             >
-                A showcase of our best edits, viral designs, and high-retention stories that helped creators scale to millions of views.
+                A showcase of our best digital solutions, from stunning websites to powerful SaaS products that helped businesses grow and succeed online.
             </motion.p>
         </div>
     );

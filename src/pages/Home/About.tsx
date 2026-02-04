@@ -49,9 +49,9 @@ const StatItem: React.FC<{ stat: Stat; idx: number }> = ({ stat, idx }) => {
 
 const About: React.FC = () => {
     const stats: Stat[] = [
-        { count: '1,200+', label: 'Videos Delivered' },
-        { count: '300+', label: 'Creators Served' },
-        { count: '450M+', label: 'Total Views' },
+        { count: '200+', label: 'Websites Delivered' },
+        { count: '150+', label: 'Happy Clients' },
+        { count: '5+', label: 'SaaS Products' },
     ];
 
     return (
@@ -66,7 +66,7 @@ const About: React.FC = () => {
                     <span className="text-primary font-bold tracking-widest uppercase text-xs">✦ About</span>
                 </motion.div>
                 <motion.h2 {...fadeInUp} className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold mb-12 leading-tight text-slate-900 dark:text-white">
-                    We're the Editing Partners Behind the <br className="hidden md:block" /> Creators Who Actually Grow with <br className="hidden md:block" /> Results. <span className="text-primary">Fast, Reliable</span> and <span className="text-[#FF5C00]">Obsessed.</span>
+                    We're the Digital Partners Behind <br className="hidden md:block" /> Businesses That Actually Grow with <br className="hidden md:block" /> Results. <span className="text-primary">Fast, Reliable</span> and <span className="text-[#FF5C00]">Obsessed.</span>
                 </motion.h2>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

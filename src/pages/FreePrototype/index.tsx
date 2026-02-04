@@ -92,7 +92,7 @@ const FreePrototypePage: React.FC = () => {
 
                             <div className="space-y-8">
                                 {[
-                                    { title: "Review Your Strategy", desc: "In-depth competitor and site analysis.", icon: "analytics", color: "blue" },
+                                    { title: "Review Your Strategy", desc: "In-depth competitor and market analysis.", icon: "analytics", color: "blue" },
                                     { title: "Visual Prototype", desc: "Custom high-fidelity homepage concept.", icon: "palette", color: "orange" },
                                     { title: "Risk-Free Decision", desc: "100% free with no strings attached.", icon: "verified", color: "blue" }
                                 ].map((item, i) => (

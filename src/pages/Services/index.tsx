@@ -1,28 +1,28 @@
 import React from 'react';
 const servicesList = [
     {
-        title: "Long-Form Editing",
-        description: "Documentaries, Vlogs, Educational Content, Podcasts. We handle multi-cam syncing, sound design, and storytelling cuts to keep your audience engaged from start to finish.",
+        title: "Website Templates",
+        description: "Ready-to-launch website templates for various industries. Fully responsive, SEO-optimized, and easy to customize. Perfect for businesses that need a professional online presence quickly and affordably.",
         image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&q=80&w=1000",
-        tags: ["4k Rendering", "Sound Mixing", "Motion Graphics"]
+        tags: ["Responsive Design", "SEO Ready", "Easy Customization"]
     },
     {
-        title: "Short-Form Content",
-        description: "TikToks, Reels, YouTube Shorts. High-energy edits designed to stop the scroll and maximize retention with trending audio and visual hooks.",
+        title: "Custom Website Development",
+        description: "Bespoke websites tailored to your unique business needs. From landing pages to complex web applications, we build digital experiences that convert visitors into customers.",
         image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000",
-        tags: ["Captioning", "Visual Hooks", "Fast Turnaround"]
+        tags: ["Custom Design", "Performance Optimized", "Scalable Architecture"]
     },
     {
-        title: "Channel Strategy",
-        description: "Not just edits, but growth. We analyze your analytics and help plan content calendars and topics that your audience actually wants to watch.",
+        title: "Social Media Management",
+        description: "Comprehensive social media services including strategy, content creation, and community management. We help you build a strong brand presence across all major platforms.",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
-        tags: ["Analytics", "Topic Research", "A/B Testing"]
+        tags: ["Content Strategy", "Analytics", "Multi-Platform"]
     },
     {
-        title: "Thumbnail Design",
-        description: "The most important part of your video. We design high-CTR thumbnails that scream 'click me' without being clickbait, using psychology-based principles.",
+        title: "SaaS Product Development",
+        description: "End-to-end SaaS development from concept to launch. We build scalable, cloud-based software solutions that solve real problems and generate recurring revenue for your business.",
         image: "https://images.unsplash.com/photo-1626785774583-b756dfe96564?auto=format&fit=crop&q=80&w=1000",
-        tags: ["3 Variations", "High Res", "Brand Consistent"]
+        tags: ["MVP Development", "Cloud Infrastructure", "Ongoing Support"]
     }
 ];
 import ServiceItem from './ServiceItem';

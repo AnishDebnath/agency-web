@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 const marqueeItems = [
     "Fast Delivery",
-    "500+ Videos Delivered",
-    "2x Engagement Boost",
+    "200+ Websites Delivered",
+    "5+ SaaS Products Built",
     "4.9 Stars Rating",
-    "Top Rated Editors On Fiverr"
+    "Award-Winning Agency"
 ];
 
 const Marquee: React.FC = () => {

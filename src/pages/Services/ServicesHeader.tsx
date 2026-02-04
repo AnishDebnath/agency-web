@@ -36,7 +36,7 @@ const ServicesHeader: React.FC = () => {
                 transition={{ delay: 0.3, duration: 0.8 }}
                 className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mt-10 leading-relaxed font-medium px-4"
             >
-                From raw footage to published masterpiece. We handle the heavy lifting so you can focus on being the face of your brand.
+                From concept to launch. We deliver comprehensive digital solutions that transform your business and drive real results.
             </motion.p>
         </div>
     );

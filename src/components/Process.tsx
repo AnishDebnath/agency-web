@@ -29,7 +29,7 @@ const Process: React.FC = () => {
                         transition={{ delay: 0.2 }}
                         className="text-lg text-slate-500 dark:text-slate-400 max-w-xl mx-auto"
                     >
-                        A quick overview of how we work together to make your edit best in class!
+                        A quick overview of how we work together to deliver exceptional digital solutions!
                     </motion.p>
                 </div>
 
@@ -61,8 +61,8 @@ const Process: React.FC = () => {
                                 <img src="https://cdn.simpleicons.org/googledrive" alt="Drive" className="w-full h-full object-contain" />
                             </motion.div>
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Drop Your Footage</h3>
-                        <p className="text-slate-500 text-sm leading-relaxed">Upload your raw clips — WeTransfer, Google Drive, Dropbox — whatever works for you.</p>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Share Your Vision</h3>
+                        <p className="text-slate-500 text-sm leading-relaxed">Tell us about your project goals, target audience, and requirements through our simple onboarding process.</p>
                     </motion.div>
 
                     {/* Step 02 */}
@@ -87,8 +87,8 @@ const Process: React.FC = () => {
                                 <img src="https://cdn.simpleicons.org/adobepremierepro/9999FF" alt="Premiere" className="w-full h-full object-contain" />
                             </motion.div>
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">We Do Our Magic</h3>
-                        <p className="text-slate-500 text-sm leading-relaxed">We cut, trim, color-grade, and add engaging transitions to bring your vision to life.</p>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">We Build & Design</h3>
+                        <p className="text-slate-500 text-sm leading-relaxed">Our expert team designs, develops, and tests your digital solution using industry-leading tools and best practices.</p>
                     </motion.div>
 
                     {/* Step 03 */}
@@ -123,8 +123,8 @@ const Process: React.FC = () => {
                                 </p>
                             </motion.div>
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Feedback? Easy</h3>
-                        <p className="text-slate-500 text-sm leading-relaxed">Want something changed? We offer smooth revision rounds to make sure everything is perfect.</p>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Review & Refine</h3>
+                        <p className="text-slate-500 text-sm leading-relaxed">We present the work for your feedback and make revisions until you're completely satisfied with the result.</p>
                     </motion.div>
 
                     {/* Step 04 */}
@@ -154,8 +154,8 @@ const Process: React.FC = () => {
                                 </div>
                             </motion.div>
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Upload & Grow</h3>
-                        <p className="text-slate-500 text-sm leading-relaxed">We deliver your final video in ready-to-upload YouTube format so you can focus on growing.</p>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Launch & Support</h3>
+                        <p className="text-slate-500 text-sm leading-relaxed">We deliver your final product ready to launch, with ongoing support to ensure continued success.</p>
                     </motion.div>
                 </div>
             </div>

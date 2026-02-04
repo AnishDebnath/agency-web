@@ -55,7 +55,7 @@ const FeaturedWork: React.FC = () => {
                         transition={{ delay: 0.2 }}
                         className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
                     >
-                        Here’s a glimpse of what CreatorFlow-powered creators have brought to life.
+                        Here's a glimpse of what our digital solutions have brought to life for our clients.
                     </motion.p>
                 </div>
 
