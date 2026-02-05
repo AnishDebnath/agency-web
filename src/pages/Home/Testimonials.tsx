@@ -85,14 +85,14 @@ const Testimonials: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold text-slate-900 dark:text-white mb-8 tracking-tight flex justify-center items-center gap-x-4 whitespace-nowrap"
+                        className="text-3xl md:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 dark:text-white mb-8 tracking-tight flex justify-center items-center gap-x-4 whitespace-nowrap"
                     >
                         <span>Kind words from</span>
                         <motion.div
                             whileHover={{ rotate: 10, scale: 1.1 }}
-                            className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl shadow-xl flex items-center justify-center transform rotate-[10deg] border-t border-white/20 relative top-2"
+                            className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl shadow-xl flex items-center justify-center transform rotate-[10deg] border-t border-white/20 relative top-2"
                         >
-                            <span className="material-symbols-rounded text-white text-4xl md:text-5xl drop-shadow-md">sentiment_satisfied</span>
+                            <span className="material-symbols-rounded text-white text-3xl md:text-4xl drop-shadow-md">sentiment_satisfied</span>
                         </motion.div>
                         <span>clients</span>
                     </motion.h2>

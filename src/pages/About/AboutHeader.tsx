@@ -18,7 +18,7 @@ const AboutHeader: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tighter leading-tight text-[#111] dark:text-white mb-8"
+                className="text-3xl md:text-5xl lg:text-6xl font-display font-extrabold tracking-tighter leading-tight text-[#111] dark:text-white mb-8"
             >
                 <div className="flex flex-wrap justify-center items-center gap-x-3 md:gap-x-4">
                     <span>We’re the</span>

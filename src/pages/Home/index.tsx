@@ -32,7 +32,11 @@ const Home: React.FC = () => {
             <Carousel windowWidth={windowWidth} />
             <Marquee />
             <About />
-            <BrandShowcase />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="-mx-4 sm:-mx-6 lg:-mx-8">
+                    <BrandShowcase />
+                </div>
+            </div>
             <FreePrototype />
             <WhyChooseUs />
             <Services />

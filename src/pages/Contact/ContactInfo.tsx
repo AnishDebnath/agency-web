@@ -67,7 +67,7 @@ const ContactInfo: React.FC = () => {
             <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-5xl md:text-6xl font-display font-extrabold text-slate-900 dark:text-white mb-8 leading-tight"
+                className="text-4xl md:text-5xl font-display font-extrabold text-slate-900 dark:text-white mb-8 leading-tight"
             >
                 Let's start a <br />
                 <span className="flex items-center gap-3">

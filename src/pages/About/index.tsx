@@ -28,8 +28,8 @@ const AboutPage: React.FC = () => {
                 <AboutValues />
                 <AboutTeam />
                 <WhyChooseUs />
-                <WorkTestimonials />
             </div>
+            <WorkTestimonials />
 
 
         </div>

@@ -41,7 +41,7 @@ const Blog: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-display font-extrabold mb-4 text-slate-900 dark:text-white"
+                        className="text-3xl md:text-4xl font-display font-extrabold mb-4 text-slate-900 dark:text-white"
                     >
                         Creator Insights & Tips
                     </motion.h2>

@@ -121,13 +121,13 @@ const Hero: React.FC = () => {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-5xl md:text-7xl lg:text-[7.5rem] font-display font-extrabold tracking-tighter leading-[1.05] text-[#111] dark:text-white"
+                    className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tighter leading-[1.05] text-[#111] dark:text-white"
                 >
                     <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 md:gap-x-6">
                         <span>Premium</span>
                         <motion.span
                             whileHover={{ scale: 1.05, rotate: -2 }}
-                            className="relative inline-flex w-20 h-12 md:w-32 md:h-20 lg:w-40 lg:h-24 rounded-full overflow-hidden items-center justify-center bg-orange-100 align-middle shadow-inner"
+                            className="relative inline-flex w-16 h-10 md:w-24 md:h-16 lg:w-32 lg:h-20 rounded-full overflow-hidden items-center justify-center bg-orange-100 align-middle shadow-inner"
                         >
                             <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=300&q=80" className="w-full h-full object-cover opacity-90" alt="Digital" />
                         </motion.span>
@@ -138,7 +138,7 @@ const Hero: React.FC = () => {
                         <span className="text-slate-400">Solutions for</span>
                         <motion.span
                             whileHover={{ scale: 1.05, rotate: 2 }}
-                            className="relative inline-flex w-20 h-12 md:w-32 md:h-20 lg:w-40 lg:h-24 rounded-full overflow-hidden items-center justify-center bg-slate-200 align-middle shadow-inner"
+                            className="relative inline-flex w-16 h-10 md:w-24 md:h-16 lg:w-32 lg:h-20 rounded-full overflow-hidden items-center justify-center bg-slate-200 align-middle shadow-inner"
                         >
                             <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=300&q=80" className="w-full h-full object-cover" alt="Business" />
                         </motion.span>
@@ -149,7 +149,7 @@ const Hero: React.FC = () => {
                         <span className="text-slate-400">based in London,</span>
                         <motion.span
                             whileHover={{ scale: 1.05, rotate: -2 }}
-                            className="relative inline-flex w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden items-center justify-center bg-blue-100 align-middle shadow-inner border-4 border-white dark:border-slate-800"
+                            className="relative inline-flex w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden items-center justify-center bg-blue-100 align-middle shadow-inner border-4 border-white dark:border-slate-800"
                         >
                             <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=300&q=80" className="w-full h-full object-cover" alt="London" />
                         </motion.span>

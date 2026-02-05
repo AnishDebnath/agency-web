@@ -16,7 +16,7 @@ const ServicesHeader: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold tracking-tighter leading-[1.1] text-[#111] dark:text-white"
+                className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tighter leading-[1.1] text-[#111] dark:text-white"
             >
                 <div className="flex flex-wrap justify-center items-center gap-x-4 md:gap-x-6">
                     <span>Services that</span>
