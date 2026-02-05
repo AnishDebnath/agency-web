@@ -33,7 +33,7 @@ const FAQ: React.FC = () => {
     return (
         <section className="py-24 bg-transparent">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24">
                     {/* Left Column - Text */}
                     <div className="lg:col-span-5">
                         <motion.div
@@ -49,7 +49,7 @@ const FAQ: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 dark:text-white mb-6 leading-[1.1]"
+                            className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-extrabold text-slate-900 dark:text-white mb-6 leading-[1.1]"
                         >
                             Got Questions?<br />
                             We Got Answers
@@ -76,15 +76,15 @@ const FAQ: React.FC = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1 }}
-                                    className={`rounded-[2rem] transition-all duration-300 border border-slate-100 dark:border-slate-800 shadow-lg hover:shadow-xl ${isOpen ? 'bg-white dark:bg-slate-900 p-8' : 'bg-white/80 dark:bg-slate-900/50 px-8 py-5 hover:bg-white dark:hover:bg-slate-900'}`}
+                                    className={`rounded-[2rem] transition-all duration-300 border border-slate-100 dark:border-slate-800 shadow-lg hover:shadow-xl ${isOpen ? 'bg-white dark:bg-slate-900 p-6 md:p-8 lg:p-7 xl:p-8' : 'bg-white/80 dark:bg-slate-900/50 px-6 py-5 md:px-8 hover:bg-white dark:hover:bg-slate-900'}`}
                                 >
                                     <button
                                         onClick={() => setOpenFAQ(isOpen ? null : index)}
                                         className="flex justify-between items-start w-full text-left gap-4"
                                     >
-                                        <h3 className={`font-bold text-lg md:text-xl leading-snug ${isOpen ? 'text-slate-900 dark:text-white' : 'text-slate-800 dark:text-slate-200'}`}>
+                                        <h4 className={`font-bold text-lg md:text-xl leading-snug ${isOpen ? 'text-slate-900 dark:text-white' : 'text-slate-800 dark:text-slate-200'}`}>
                                             {faq.q}
-                                        </h3>
+                                        </h4>
                                         <div className={`flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-colors duration-300 ${isOpen ? 'border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800' : 'border-slate-200 dark:border-slate-800'}`}>
                                             <span className={`material-symbols-rounded text-xl transition-transform duration-300 ${isOpen ? 'rotate-180 text-slate-900 dark:text-white' : 'text-slate-400'}`}>
                                                 expand_more

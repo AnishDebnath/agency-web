@@ -26,7 +26,7 @@ const BrandShowcase: React.FC = () => {
                             ease: "linear",
                         },
                     }}
-                    className="flex gap-28 items-center whitespace-nowrap px-12"
+                    className="flex gap-16 lg:gap-20 xl:gap-28 items-center whitespace-nowrap px-12"
                 >
                     {[...brands, ...brands, ...brands, ...brands, ...brands].map((brand, index) => (
                         <div

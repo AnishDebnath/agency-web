@@ -59,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${isActive(link.path) ? 'text-primary dark:text-white' : 'text-slate-500 dark:text-slate-400 hover:text-primary'}`}
+                                className={`relative px-3 lg:px-2.5 xl:px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${isActive(link.path) ? 'text-primary dark:text-white' : 'text-slate-500 dark:text-slate-400 hover:text-primary'}`}
                             >
                                 {link.name}
                                 {isActive(link.path) && (

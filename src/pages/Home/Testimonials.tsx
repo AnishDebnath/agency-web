@@ -85,7 +85,7 @@ const Testimonials: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 dark:text-white mb-8 tracking-tight flex justify-center items-center gap-x-4 whitespace-nowrap"
+                        className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-extrabold text-slate-900 dark:text-white mb-8 tracking-tight flex justify-center items-center gap-x-4 whitespace-nowrap"
                     >
                         <span>Kind words from</span>
                         <motion.div
@@ -160,7 +160,7 @@ const Testimonials: React.FC = () => {
                                             exit={{ opacity: 0, x: -20 }}
                                             transition={{ duration: 0.4, ease: "easeOut" }}
                                         >
-                                            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight min-h-[4.5em] md:min-h-[3.5em]">
+                                            <blockquote className="text-2xl md:text-3xl lg:text-2xl xl:text-4xl font-bold text-white leading-tight min-h-[4.5em] md:min-h-[3.5em]">
                                                 "{featuredTestimonial.text}"
                                             </blockquote>
                                         </motion.div>

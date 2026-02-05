@@ -61,7 +61,7 @@ const Services: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight"
+                        className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-display font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight"
                     >
                         What We Do Best
                     </motion.h2>
@@ -96,7 +96,7 @@ const Services: React.FC = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
                                 whileHover={{ y: -5 }}
-                                className={`group relative overflow-hidden rounded-[2.5rem] bg-[#121212] p-8 md:p-12 flex flex-col justify-between min-h-[420px] shadow-2xl border border-white/5 ${colSpan}`}
+                                className={`group relative overflow-hidden rounded-[2.5rem] bg-[#121212] p-8 md:p-10 lg:p-10 xl:p-12 flex flex-col justify-between min-h-[380px] md:min-h-[420px] shadow-2xl border border-white/5 ${colSpan}`}
                             >
                                 <div className="absolute inset-0 opacity-30 pointer-events-none"
                                     style={{

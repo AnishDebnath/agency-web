@@ -65,7 +65,7 @@ const About: React.FC = () => {
                 >
                     <span className="text-primary font-bold tracking-widest uppercase text-xs">✦ About</span>
                 </motion.div>
-                <motion.h2 {...fadeInUp} className="text-3xl md:text-4xl lg:text-5xl font-display font-extrabold mb-12 leading-tight text-slate-900 dark:text-white">
+                <motion.h2 {...fadeInUp} className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-display font-extrabold mb-12 leading-tight text-slate-900 dark:text-white text-center">
                     We're the Digital Partners Behind <br className="hidden md:block" /> Businesses That Actually Grow with <br className="hidden md:block" /> Results. <span className="text-primary">Fast, Reliable</span> and <span className="text-[#FF5C00]">Obsessed.</span>
                 </motion.h2>
                 <motion.div

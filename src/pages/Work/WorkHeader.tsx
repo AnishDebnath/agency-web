@@ -16,13 +16,13 @@ const WorkHeader: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tighter leading-[1.1] text-[#111] dark:text-white"
+                className="text-4xl md:text-5xl lg:text-5xl xl:text-7xl font-display font-extrabold tracking-tighter leading-[1.1] text-[#111] dark:text-white"
             >
                 <div className="flex flex-wrap justify-center items-center gap-x-4 md:gap-x-6">
                     <span>Our Selected</span>
                     <motion.span
                         whileHover={{ scale: 1.05, rotate: -2 }}
-                        className="relative inline-flex w-20 h-12 md:w-32 md:h-16 lg:w-40 lg:h-20 rounded-full overflow-hidden items-center justify-center bg-orange-100 align-middle shadow-inner"
+                        className="relative inline-flex w-16 h-10 md:w-20 md:h-12 lg:w-24 lg:h-14 xl:w-32 xl:h-20 rounded-full overflow-hidden items-center justify-center bg-orange-100 align-middle shadow-inner"
                     >
                         <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=300&q=80" className="w-full h-full object-cover opacity-90" alt="Video" />
                     </motion.span>
