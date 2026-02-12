@@ -1,24 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const carouselItems = [
     {
-        title: "Master the Art of Vertical Content",
-        desc: "Our editors use psychological triggers to keep your audience scrolling and engaged for longer.",
-        img: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=80",
-        type: "hero" as const,
-        badge: "Retention Expert"
+        id: 1,
+        title: "Portfoy",
+        category: "Portfolio Template",
+        img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+        link: "#"
     },
     {
-        img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
-        type: "app" as const,
-        bg: "bg-slate-100"
+        id: 2,
+        title: "CourseSite",
+        category: "Education Platform",
+        img: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
+        link: "#"
     },
     {
-        img: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?auto=format&fit=crop&w=1200&q=80",
-        type: "dashboard" as const,
-        bg: "bg-[#0A0A0A]"
-    }
+        id: 3,
+        title: "LanderOS",
+        category: "SaaS Landing",
+        img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+        link: "#"
+    },
+    {
+        id: 4,
+        title: "Alter",
+        category: "Fintech Dashboard",
+        img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+        link: "#"
+    },
+    {
+        id: 5,
+        title: "Nexus",
+        category: "Design System",
+        img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
+        link: "#"
+    },
 ];
 
 interface CarouselProps {
@@ -26,90 +44,56 @@ interface CarouselProps {
 }
 
 const Carousel: React.FC<CarouselProps> = ({ windowWidth }) => {
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    const handleNext = () => setActiveIndex((prev) => prev + 1);
-    const handlePrev = () => setActiveIndex((prev) => prev - 1);
-
-    const swipeConfidenceThreshold = 10000;
-    const swipePower = (offset: number, velocity: number) => {
-        return Math.abs(offset) * velocity;
-    };
-
-    const getCardSpacing = () => {
-        if (windowWidth < 768) return windowWidth * 0.85;
-        if (windowWidth < 1024) return 600;
-        return 820;
-    };
-
-    // Auto-play carousel
-    useEffect(() => {
-        const timer = setInterval(handleNext, 2000);
-        return () => clearInterval(timer);
-    }, []);
+    // Duplicate items for seamless loop
+    const marqueeItems = [...carouselItems, ...carouselItems, ...carouselItems];
 
     return (
-        <div className="w-full relative z-20 pb-20 group/carousel perspective-[2000px] mt-12 overflow-hidden">
-            <div className="relative w-full h-[600px] md:h-[700px] flex items-center justify-center">
-                {/* Carousel Track */}
+        <div className="w-full relative z-20 pb-12 md:pb-20 pt-0 overflow-hidden bg-transparent">
+            {/* Fade Filters */}
+            <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-background-light dark:from-background-dark to-transparent z-30 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-background-light dark:from-background-dark to-transparent z-30 pointer-events-none" />
+
+            <div className="flex overflow-hidden">
                 <motion.div
-                    className="absolute w-full h-full flex items-center justify-center cursor-grab active:cursor-grabbing"
-                    drag="x"
-                    dragConstraints={{ left: 0, right: 0 }}
-                    dragElastic={0.1}
-                    onDragEnd={(e, { offset, velocity }) => {
-                        const swipe = swipePower(offset.x, velocity.x);
-
-                        if (swipe < -swipeConfidenceThreshold) {
-                            handleNext();
-                        } else if (swipe > swipeConfidenceThreshold) {
-                            handlePrev();
-                        } else if (offset.x < -100) {
-                            handleNext();
-                        } else if (offset.x > 100) {
-                            handlePrev();
-                        }
+                    initial={{ x: 0 }}
+                    animate={{ x: "-33.33%" }}
+                    transition={{
+                        duration: 30,
+                        ease: "linear",
+                        repeat: Infinity,
+                        repeatType: "loop"
                     }}
+                    className="flex gap-4 md:gap-6 px-4 min-w-max"
                 >
-                    {[-2, -1, 0, 1, 2].map((offset) => {
-                        const index = activeIndex + offset;
-                        const modIndex = ((index % carouselItems.length) + carouselItems.length) % carouselItems.length;
-                        const item = carouselItems[modIndex];
-                        const isCenter = offset === 0;
-                        const spacing = getCardSpacing();
-
-                        return (
-                            <motion.div
-                                key={index}
-                                className={`absolute top-1/2 left-1/2 w-[340px] md:w-[900px] h-[500px] md:h-[600px] rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col origin-center border-[6px] border-white dark:border-slate-800 bg-white dark:bg-slate-900`}
-                                initial={false}
-                                animate={{
-                                    x: `calc(-50% + ${offset * spacing}px)`,
-                                    scale: isCenter ? 1 : 0.8,
-                                    opacity: isCenter ? 1 : 0.4,
-                                    zIndex: isCenter ? 50 : 10 - Math.abs(offset),
-                                    rotateY: isCenter ? 0 : (offset * (windowWidth < 768 ? 0 : (offset > 0 ? -15 : 15))), // Rotate inwards
-                                    y: "-50%",
-                                    filter: isCenter ? 'blur(0px)' : 'blur(4px) grayscale(50%)',
-                                }}
-                                transition={{
-                                    type: "spring",
-                                    stiffness: 150,
-                                    damping: 20,
-                                    mass: 1
-                                }}
-                                style={{
-                                    transformStyle: 'preserve-3d',
-                                }}
-                            >
+                    {marqueeItems.map((item, index) => (
+                        <div
+                            key={`${item.id}-${index}`}
+                            className="relative flex-shrink-0 w-[85vw] sm:w-[500px] bg-white dark:bg-slate-900/50 rounded-[2.5rem] p-4 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col gap-4"
+                        >
+                            {/* Image & Content Container */}
+                            <div className="w-full h-[400px] rounded-[2rem] overflow-hidden relative isolate group/image">
                                 <img
                                     src={item.img}
-                                    alt="Slide"
-                                    className="w-full h-full object-cover pointer-events-none"
+                                    alt={item.title}
+                                    className="w-full h-full object-cover transform group-hover/image:scale-105 transition-transform duration-700 ease-out"
                                 />
-                            </motion.div>
-                        );
-                    })}
+
+                                {/* Floating Glass Content Card */}
+                                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-3xl bg-white/10 dark:bg-black/60 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-between z-10 transition-transform duration-300 group-hover:scale-[1.02]">
+                                    <div>
+                                        <h3 className="text-xl font-display font-bold text-white mb-0.5 tracking-tight group-hover:text-primary transition-colors duration-300">{item.title}</h3>
+                                        <p className="text-sm text-slate-200 font-medium opacity-90">{item.category}</p>
+                                    </div>
+
+                                    <button
+                                        className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:text-white shadow-md group-hover:rotate-45"
+                                    >
+                                        <span className="material-symbols-rounded text-[24px]">arrow_outward</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </motion.div>
             </div>
         </div>
