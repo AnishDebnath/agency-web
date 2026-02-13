@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const ServicesHeader: React.FC = () => {
     return (
-        <div className="text-center mb-20 md:mb-28">
+        <div className="text-center mb-16 md:mb-20">
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
