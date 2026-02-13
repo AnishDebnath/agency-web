@@ -31,7 +31,7 @@ const FAQ: React.FC = () => {
     const [openFAQ, setOpenFAQ] = useState<number | null>(0);
 
     return (
-        <section className="py-24 bg-transparent">
+        <section className="py-25 bg-transparent">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24">
                     {/* Left Column - Text */}

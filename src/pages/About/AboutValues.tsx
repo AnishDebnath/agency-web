@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const AboutValues: React.FC = () => {
     return (
-        <div className="mb-24 lg:mb-32">
+        <div className="mb-16 lg:mb-20">
             <div className="text-center mb-16 md:mb-20">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}

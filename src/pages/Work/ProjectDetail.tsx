@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { projects } from './index';
+import { CTA } from '../../components';
 
 const ProjectDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -29,7 +30,7 @@ const ProjectDetail: React.FC = () => {
     const moreWork = projects.filter(p => p.id !== project.id).slice(0, 2);
 
     return (
-        <div className="pt-32 pb-24 relative">
+        <div className="pt-25 pb-0 relative">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 {/* Header */}
@@ -227,6 +228,7 @@ const ProjectDetail: React.FC = () => {
                 </div>
 
             </div>
+            <CTA />
         </div>
     );
 };

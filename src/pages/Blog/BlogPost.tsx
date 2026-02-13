@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { articles } from './index';
 import ArticleCard from './ArticleCard';
+import { CTA } from '../../components';
 
 const BlogPost: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -29,7 +30,7 @@ const BlogPost: React.FC = () => {
     const moreArticles = articles.filter(a => a.id !== article.id).slice(0, 2);
 
     return (
-        <div className="pt-32 pb-24 relative min-h-screen">
+        <div className="pt-25 pb-0 relative min-h-screen">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{
@@ -123,6 +124,7 @@ const BlogPost: React.FC = () => {
                 </div>
 
             </div>
+            <CTA />
         </div>
     );
 };

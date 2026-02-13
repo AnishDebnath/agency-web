@@ -1,13 +1,13 @@
 import React from 'react';
 import ContactForm from './ContactForm';
 import ContactInfo from './ContactInfo';
-import { FAQ } from '../../components';
+import { FAQ, CTA } from '../../components';
 
 const ContactPage: React.FC = () => {
     return (
         <div className="flex flex-col">
             {/* Contact Section */}
-            <div className="relative min-h-[85vh] flex items-center justify-center py-20 lg:py-32 overflow-hidden">
+            <div className="relative min-h-[85vh] flex items-center justify-center py-25 overflow-hidden">
                 {/* Background elements to fill space */}
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
                     <div className="absolute top-[10%] -left-[5%] w-[30%] h-[30%] bg-primary/5 rounded-full blur-[120px] animate-blob" />
@@ -27,9 +27,10 @@ const ContactPage: React.FC = () => {
             </div>
 
             {/* FAQ Section */}
-            <div className="pb-24">
+            <div>
                 <FAQ />
             </div>
+            <CTA />
         </div>
     );
 };

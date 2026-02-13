@@ -54,11 +54,11 @@ export const articles = [
 ];
 import ArticleCard from './ArticleCard';
 import BlogHeader from './BlogHeader';
-import { FAQ } from '../../components';
+import { FAQ, CTA } from '../../components';
 
 const BlogPage: React.FC = () => {
     return (
-        <div className="pt-32 pb-24 relative min-h-screen">
+        <div className="pt-25 pb-0 relative min-h-screen">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{
@@ -80,6 +80,7 @@ const BlogPage: React.FC = () => {
                     <FAQ />
                 </div>
             </div>
+            <CTA />
         </div>
     );
 };

@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="max-w-[1400px] mx-auto bg-[#000000] rounded-[3rem] px-8 py-16 md:p-20 relative overflow-hidden flex flex-col justify-between"
+                className="max-w-[1400px] mx-auto bg-[#000000] rounded-[3rem] px-8 py-25 md:p-20 relative overflow-hidden flex flex-col justify-between"
             >
                 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
                     {/* Branding */}

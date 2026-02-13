@@ -39,7 +39,7 @@ const services = [
 
 const Services: React.FC = () => {
     return (
-        <section className="py-32 bg-transparent relative overflow-hidden" id="services">
+        <section className="py-25 bg-transparent relative overflow-hidden" id="services">
             {/* Subtle Grid Pattern */}
             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none"
                 style={{

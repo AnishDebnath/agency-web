@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const WhyChooseUs: React.FC = () => {
     return (
-        <section className="py-24 bg-transparent relative overflow-hidden">
+        <section className="py-25 bg-transparent relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{

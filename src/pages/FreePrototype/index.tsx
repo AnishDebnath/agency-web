@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, animate } from 'framer-motion';
 import PrototypeForm from './PrototypeForm';
-import { Process, OurSolution, FAQ } from '../../components';
+import { Process, OurSolution, FAQ, CTA } from '../../components';
 
 const CountUp: React.FC<{ val: number }> = ({ val }) => {
     const [count, setCount] = useState(0);
@@ -20,7 +20,7 @@ const FreePrototypePage: React.FC = () => {
     const [isAvatarHovered, setIsAvatarHovered] = useState(false);
     return (
         <div className="flex flex-col">
-            <div className="relative min-h-[90vh] flex items-center justify-center py-20 lg:py-32 overflow-hidden">
+            <div className="relative min-h-[90vh] flex items-center justify-center py-25 overflow-hidden">
                 {/* Background elements to fill space */}
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
                     <div className="absolute top-[10%] -left-[5%] w-[30%] h-[30%] bg-primary/5 rounded-full blur-[120px] animate-blob" />
@@ -173,10 +173,11 @@ const FreePrototypePage: React.FC = () => {
             </div>
 
             {/* FAQ Section */}
-            <div className="pb-24">
+            <div>
                 <Process />
                 <OurSolution />
                 <FAQ />
+                <CTA />
             </div>
         </div>
     );

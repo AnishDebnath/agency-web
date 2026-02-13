@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import WorkHeader from './WorkHeader';
 import WorkFilter, { categories } from './WorkFilter';
-import { FreePrototype, Process, WorkTestimonials } from '../../components';
+import { FreePrototype, Process, WorkTestimonials, CTA } from '../../components';
 
 export interface Project {
     id: string;
@@ -154,8 +154,8 @@ const WorkPage: React.FC = () => {
         : projects.filter(p => p.category === activeCategory);
 
     return (
-        <div className="pt-32 pb-24 relative">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-24">
+        <div className="pt-25 pb-0 relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-16">
                 <WorkHeader />
                 <WorkFilter
                     activeCategory={activeCategory}
@@ -177,9 +177,9 @@ const WorkPage: React.FC = () => {
             <FreePrototype />
             <Process />
             <WorkTestimonials />
+            <CTA />
         </div>
     );
 };
 
 export default WorkPage;
-

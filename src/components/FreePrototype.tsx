@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const FreePrototype: React.FC = () => {
     return (
-        <section className="py-24 relative overflow-hidden">
+        <section className="py-25 relative overflow-hidden">
             {/* Background Decorations */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-primary/5 rounded-full blur-[100px]" />

@@ -55,7 +55,7 @@ const About: React.FC = () => {
     ];
 
     return (
-        <section className="py-24" id="about">
+        <section className="py-25" id="about">
             <div className="max-w-5xl mx-auto px-4 text-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}

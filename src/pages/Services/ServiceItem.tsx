@@ -19,7 +19,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10%" }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="py-20 md:py-32 border-t border-slate-200 dark:border-slate-800"
+            className="py-16 md:py-25 border-t border-slate-200 dark:border-slate-800"
         >
             <div className={`flex flex-col lg:flex-row gap-12 lg:gap-24 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
 

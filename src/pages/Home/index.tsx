@@ -5,7 +5,8 @@ import {
     Process,
     FAQ,
     BrandShowcase,
-    OurSolution
+    OurSolution,
+    CTA
 } from '../../components';
 import Hero from './Hero';
 import Carousel from './Carousel';
@@ -47,6 +48,7 @@ const Home: React.FC = () => {
             <FAQ />
             <Blog />
             <MarqueeWork />
+            <CTA />
         </div>
     );
 };

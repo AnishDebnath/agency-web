@@ -90,7 +90,7 @@ const StatItem: React.FC<{ stat: Stat; idx: number; isLast: boolean }> = ({ stat
 
 const AboutStats: React.FC = () => {
     return (
-        <div className="mb-20 lg:mb-24 relative">
+        <div className="mb-12 lg:mb-16 relative">
             {/* Background Decoration */}
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 blur-3xl -z-10 rounded-[3rem] opacity-30" />
 

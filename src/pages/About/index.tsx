@@ -4,12 +4,12 @@ import AboutHeroImage from './AboutHeroImage';
 import AboutValues from './AboutValues';
 import AboutStats from './AboutStats';
 import AboutTeam from './AboutTeam';
-import { WhyChooseUs, WorkTestimonials, BrandShowcase } from '../../components';
+import { WhyChooseUs, WorkTestimonials, BrandShowcase, CTA } from '../../components';
 
 
 const AboutPage: React.FC = () => {
     return (
-        <div className="pt-32 pb-24 relative">
+        <div className="pt-25 pb-0 relative">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{
@@ -18,9 +18,9 @@ const AboutPage: React.FC = () => {
                 }}>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-16">
                 <AboutHeader />
-                <div className="mb-24 -mx-4 sm:-mx-6 lg:-mx-8">
+                <div className="mb-16 -mx-4 sm:-mx-6 lg:-mx-8">
                     <BrandShowcase />
                 </div>
                 <AboutHeroImage />
@@ -30,8 +30,7 @@ const AboutPage: React.FC = () => {
                 <WhyChooseUs />
             </div>
             <WorkTestimonials />
-
-
+            <CTA />
         </div>
     );
 };

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const AboutHeroImage: React.FC = () => {
     return (
-        <div className="relative mb-20 md:mb-24">
+        <div className="relative mb-12 md:mb-16">
             {/* Background Glow */}
             <div className="absolute -inset-4 bg-primary/20 blur-3xl opacity-10 -z-10 rounded-[3rem]"></div>
 
