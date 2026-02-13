@@ -79,16 +79,16 @@ const Carousel: React.FC<CarouselProps> = ({ windowWidth }) => {
                                 />
 
                                 {/* Floating Glass Content Card */}
-                                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-3xl bg-white/10 dark:bg-black/60 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-between z-10 transition-transform duration-300 group-hover:scale-[1.02]">
+                                <div className="absolute bottom-4 left-4 right-4 px-5 py-3.5 rounded-[1.5rem] bg-white/10 dark:bg-black/60 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-between z-10 transition-transform duration-300 group-hover:scale-[1.02]">
                                     <div>
-                                        <h3 className="text-xl font-display font-bold text-white mb-0.5 tracking-tight group-hover:text-primary transition-colors duration-300">{item.title}</h3>
-                                        <p className="text-sm text-slate-200 font-medium opacity-90">{item.category}</p>
+                                        <h3 className="text-lg font-display font-bold text-white mb-0 tracking-tight group-hover:text-primary transition-colors duration-300">{item.title}</h3>
+                                        <p className="text-xs text-slate-200 font-medium opacity-80 uppercase tracking-wider">{item.category}</p>
                                     </div>
 
                                     <button
-                                        className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:text-white shadow-md group-hover:rotate-45"
+                                        className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:text-white shadow-md group-hover:rotate-45"
                                     >
-                                        <span className="material-symbols-rounded text-[24px]">arrow_outward</span>
+                                        <span className="material-symbols-rounded text-[20px]">arrow_outward</span>
                                     </button>
                                 </div>
                             </div>
