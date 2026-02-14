@@ -18,17 +18,17 @@ const AboutPage: React.FC = () => {
                 }}>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-16">
+            <div className="py-25 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <AboutHeader />
-                <div className="mb-16 -mx-4 sm:-mx-6 lg:-mx-8">
+                <div className="mb-20 -mx-4 sm:-mx-6 lg:-mx-8">
                     <BrandShowcase />
                 </div>
                 <AboutHeroImage />
                 <AboutStats />
-                <AboutValues />
-                <AboutTeam />
-                <WhyChooseUs />
             </div>
+            <AboutValues />
+            <AboutTeam />
+            <WhyChooseUs />
             <WorkTestimonials />
             <CTA />
         </div>

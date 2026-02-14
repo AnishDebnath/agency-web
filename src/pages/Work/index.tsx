@@ -155,7 +155,7 @@ const WorkPage: React.FC = () => {
 
     return (
         <div className="pt-25 pb-0 relative">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-16">
+            <div className="py-25 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <WorkHeader />
                 <WorkFilter
                     activeCategory={activeCategory}
