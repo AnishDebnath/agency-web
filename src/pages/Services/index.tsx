@@ -32,7 +32,7 @@ import { FAQ, Process, WhyChooseUs, CTA } from '../../components';
 const ServicesPage: React.FC = () => {
     return (
         <div className="pt-25 pb-0 relative">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="pt-25 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ServicesHeader />
 
                 <div className="flex flex-col mb-16">

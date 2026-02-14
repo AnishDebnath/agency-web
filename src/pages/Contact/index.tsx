@@ -14,7 +14,7 @@ const ContactPage: React.FC = () => {
                     <div className="absolute bottom-[10%] -right-[5%] w-[30%] h-[30%] bg-blue-500/5 rounded-full blur-[120px] animate-blob animation-delay-2000" />
                 </div>
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div className="pt-25 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                         <div className="lg:sticky lg:top-32">
                             <ContactInfo />
